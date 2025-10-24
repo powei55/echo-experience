@@ -1,26 +1,88 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-nunito_sans: 'Nunito Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-lato: 'Lato', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base fonts */
+html {
+  font-family: var(--font-lato);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.poppins {
+  font-family: var(--font-poppins);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-nunito_sans {
+  font-family: var(--font-nunito_sans);
+}
+
+/* Slick Dots Styling */
+.slick-dots {
+  bottom: 25px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots li {
+  margin: 0 6px !important;
+  position: relative;
+}
+
+.slick-dots li button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Dot Base */
+.slick-dots li button:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+/* Hover Effect */
+.slick-dots li button:hover:before {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/* Active Dot */
+.slick-dots li.slick-active button:before {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/* Circle Ring for Active Dot */
+.slick-dots li.slick-active button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;           
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+/* Optional hover ring preview */
+.slick-dots li:hover button::after {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Input file button */
+input[type='file']::file-selector-button {
+  @apply bg-purple-100 text-purple-900 font-medium text-sm py-2 px-4 rounded border-0 cursor-pointer;
 }
