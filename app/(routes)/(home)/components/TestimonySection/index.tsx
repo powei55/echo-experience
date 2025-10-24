@@ -73,11 +73,11 @@ const TestimonialSection = () => {
               transition={{ duration: 0.7, delay: index * 0.1 }}
             >
               <div className="relative bg-white/70 backdrop-blur-md shadow-lg rounded-2xl p-10 text-center mx-6 overflow-visible">
-                <div className="">
+                <div className="mb-4">
                   <p className="text-gray-700 italic mb-6 leading-relaxed text-base md:text-lg">
                     “{t.text}”
                   </p>
-                  <h4 className="text-lg font-semibosld text-gray-800">{t.name}</h4>
+                  <h4 className="text-lg font-semibold text-gray-800">{t.name}</h4>
                   <span className="text-sm text-gray-500">{t.role}</span>
                 </div>
               </div>

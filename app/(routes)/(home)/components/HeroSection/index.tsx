@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Slider, { Settings } from "react-slick";
+import Link from "next/link";
 
 const slides = [
   {
@@ -15,8 +16,9 @@ const slides = [
       "Orsay Museum",
       "Opera Garnier",
       "Carnavalet Museum",
-      "Versailles Palace",
+      // "Versailles Palace",
     ],
+    link: "/museums",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const slides = [
       "Full-day Champagne Visit",
       "Private Parisian Wine tasting with a Sommelier",
     ],
+    link: "/wine-tasting", 
   },
   {
     id: 3,
@@ -38,9 +41,10 @@ const slides = [
     museums: [
       "Shopping at the historic La Samaritaine",
       "Shopping at Le Marais District",
-      "Antique shopping at Puces de Saint-Ouen",
-      "Shopping at La Vallée Village",
+      // "Antique shopping at Puces de Saint-Ouen",
+      // "Shopping at La Vallée Village",
     ],
+    link: "/private-shopping",
   },
   {
     id: 4,
@@ -51,11 +55,12 @@ const slides = [
     museums: [
       "Lunch/Dinner Seine River Boat Cruise",
       "Vintage Car Parisian Tour",
-      "Paris full day magic: Montmartre, Nôtre Dame, Louvre, Seine River Boat Cruise",
-      "Paris île de la Cité experience: Notre Dame, St. Chapelle, La Conciergerie, Pont Neuf",
+      // "Paris full day magic: Montmartre, Nôtre Dame, Louvre",
     ],
+    link: "/paris-experience",
   },
 ];
+
 
 const HomePage = () => {
   const settings: Settings = {
@@ -119,27 +124,32 @@ const HomePage = () => {
 
               {/* Glass content box */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-10 text-center text-white shadow-lg z-10 max-w-2xl w-[90%]">
-                  <div className="flex flex-col items-center gap-8 md:gap-20 justify-center">
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-10 text-center text-white shadow-lg z-10 max-w-2xl w-[80%]">
+                  <div className="flex flex-col items-center gap-8 justify-center">
                     {/* Logo + Title */}
                     <div className="flex flex-col items-center">
                       <Image
                         src="/assets/brand.png"
                         alt="Brand Logo"
-                        width={200}
-                        height={200}
+                        width={160}
+                        height={1600}
                         className="rounded-md object-cover mb-4"
                       />
                       <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-2">
                         {slide.title}
                       </h1>
                       <p className="text-base md:text-lg font-light tracking-wide opacity-90">
-                        {slide.description}
+                       {slide.description.length > 60 && (
+                            <span className="sm:hidden">
+                              {slide.description.slice(0, 55)}...
+                            </span>
+                          )}
+                          <span className="hidden sm:inline">{slide.description}</span>
                       </p>
                     </div>
 
                     {/* Experiences list */}
-                    <div className="text-sm md:text-base font-light tracking-wider flex flex-wrap justify-center gap-2 text-center">
+                  <div className="hidden sm:flex text-sm md:text-base font-light tracking-wider flex-wrap justify-center gap-2 text-center">
                       {slide.museums.map((museum, index) => (
                         <React.Fragment key={index}>
                           <span>{museum}</span>
@@ -151,11 +161,13 @@ const HomePage = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <div>
-                      <button className="mt-4 bg-white/20 hover:bg-white/30 text-white font-medium uppercase tracking-wide py-3 px-8 rounded-full border border-white/30 transition duration-300">
+                   <div>
+                    <Link href={slide.link}>
+                      <button className="mt-4 bg-white/20 hover:bg-white/30 text-white font-medium uppercase tracking-wide py-3 px-8 rounded-full border border-white/30 transition duration-300 cursor-pointer">
                         Book Now
                       </button>
-                    </div>
+                    </Link>
+                  </div>
                   </div>
                 </div>
               </div>
