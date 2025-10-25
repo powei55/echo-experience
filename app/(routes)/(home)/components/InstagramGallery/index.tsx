@@ -5,9 +5,9 @@ import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 
 const instagramPosts = [
-  { id: 1, src: "/assets/6.jpg", link: "https://www.instagram.com/p/DPTKxEXiHdm/?utm_source=ig_web_copy_link", label: "Luxury Dining" },
-  { id: 2, src: "/assets/7.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Private Tours" },
-  { id: 3, src: "/assets/8.jpg", link: "https://www.instagram.com/p/DOLEgR2CBvV/?utm_source=ig_web_copy_link", label: "Fine Wine Tasting" },
+  { id: 1, src: "/assets/22.jpg", link: "https://www.instagram.com/p/DPTKxEXiHdm/?utm_source=ig_web_copy_link", label: "Luxury Dining" },
+  { id: 2, src: "/assets/8.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Private Tours" },
+  { id: 3, src: "/assets/24.jpg", link: "https://www.instagram.com/p/DOLEgR2CBvV/?utm_source=ig_web_copy_link", label: "Fine Wine Tasting" },
   { id: 4, src: "/assets/9.jpg", link: "https://www.instagram.com/p/DPTKxEXiHdm/?utm_source=ig_web_copy_link", label: "Cultural Moments" },
   { id: 5, src: "/assets/3.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Paris Nights" },
   { id: 6, src: "/assets/12.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Fashion & Lifestyle" },

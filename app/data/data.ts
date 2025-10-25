@@ -120,7 +120,7 @@ export const wines = [
     id: 1,
     name: "Private Parisian Wine Tasting with a Sommelier",
     price: "€120",
-    img: "/assets/16.jpg",
+    img: "/assets/21.jpg",
     description:
       "Enjoy an intimate wine-tasting session led by an expert sommelier, where every sip tells a story of France’s finest vineyards.",
   },

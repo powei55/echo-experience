@@ -9,13 +9,13 @@ const GallerySection = () => {
     { src: "/assets/9.jpg", label: "Visit Museum", href: "/museums" },
     { src: "/assets/19.jpg", label: "Shopping", href: "/private-shopping/1" },
     { src: "/assets/18.jpg", label: "Vintage Car Tour", href: "/paris-experience/2" },
-    { src: "/assets/14.jpg", label: "Wine Tasting with a Sommelier", href: "/wine-tasting/1" },
+    { src: "/assets/21.jpg", label: "Wine Tasting with a Sommelier", href: "/wine-tasting/1" },
     { src: "/assets/6.jpg", label: "Events", href: "/paris-experience/2" },
   ];
 
   return (
     <section id="gallery" className="py-4 bg-[#e6c8b7]">
-      <div className="w-full mx-auto py-4 sm:w-[70%] px-4">
+      <div className="w-full mx-auto py-4 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
           Explore Our Gallery
         </h2>
