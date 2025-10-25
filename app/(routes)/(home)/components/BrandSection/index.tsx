@@ -47,7 +47,7 @@ const BrandExperienceSection = () => {
 
   return (
     <section  id="brand" className="bg-[#faf7f5] py-20">
-      <div className="w-full mx-auto sm:w-[75%] px-6">
+      <div className="w-full mx-auto xl:w-[75%] px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
