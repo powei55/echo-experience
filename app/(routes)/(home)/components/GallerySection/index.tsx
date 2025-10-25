@@ -14,8 +14,8 @@ const GallerySection = () => {
   ];
 
   return (
-    <section id="gallery" className="py-4 bg-[#e6c8b7] xl:w-[70%]">
-      <div className="w-full mx-auto py-4 px-4">
+    <section id="gallery" className="py-4 bg-[#e6c8b7]">
+      <div className="w-full mx-auto py-4 px-4 xl:w-[70%]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
           Explore Our Gallery
         </h2>
