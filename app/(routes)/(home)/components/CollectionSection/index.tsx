@@ -42,7 +42,7 @@ const CollectionSection = () => {
   return (
     <section
       id="experience"
-      className="w-full mx-auto py-20 px-6 sm:w-[70%] bg-white text-center"
+      className="w-full mx-auto py-20 px-6 bg-white text-center"
     >
       {/* Section Header */}
       <div className="max-w-3xl mx-auto mb-12">
