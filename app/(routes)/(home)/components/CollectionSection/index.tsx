@@ -92,4 +92,3 @@ const CollectionSection = () => {
 };
 
 export default CollectionSection;
-

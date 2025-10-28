@@ -2,24 +2,53 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-:root {
+/* :root {
   --font-nunito_sans: 'Nunito Sans', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-lato: 'Lato', sans-serif;
+} */
+
+/* Custom Grande font */
+@font-face {
+  font-family: "Grande";
+  src: url("/fonts/Grande-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Base fonts */
-html {
-  font-family: var(--font-lato);
+/* ======= Base Typography ======= */
+html,
+body {
+ font-family: var(--font-montserrat), sans-serif;
+  scroll-behavior: smooth;
 }
 
-.poppins {
-  font-family: var(--font-poppins);
+/* Headings use Grande for elegant style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair_display), serif;
+  letter-spacing: 0.5px;
 }
 
-.font-nunito_sans {
-  font-family: var(--font-nunito_sans);
+/* Buttons
+button {
+  background-color: #1c3934;
+  color: #f9f7f5;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
 }
+
+button:hover {
+  background-color: #c6c8b7;
+  color: #1c3934;
+}
+
+Links
+a:hover {
+  opacity: 0.8;
+}
+*/
 
 /* Slick Dots Styling */
 .slick-dots {
@@ -72,7 +101,7 @@ html {
   top: 50%;
   left: 50%;
   width: 16px;
-  height: 16px;           
+  height: 16px;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease;
 }

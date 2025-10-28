@@ -131,7 +131,7 @@ const ContactPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative text-[#f9f7f5] text-5xl md:text-6xl font-bold tracking-wide text-center"
+            className="relative text-white text-5xl md:text-6xl font-bold tracking-wide text-center"
             >
             Get in Touch
             </motion.h1>
