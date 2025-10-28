@@ -44,23 +44,23 @@ const DesktopNavbar = () => {
           </Link>
 
           <Link
-            href="/#brand"
+            href="/#about"
             onClick={() => {
               document.getElementById("brand")?.scrollIntoView({ behavior: "smooth" });
             }}
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
-            BRAND
+            ABOUT-US
           </Link>
 
           <Link
-            href="/#instagram"
-            onClick={() => {
-              document.getElementById("instagram")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            href="/contact-page"
+            // onClick={() => {
+            //   document.getElementById("instagram")?.scrollIntoView({ behavior: "smooth" });
+            // }}
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
-            INSTAGRAM GALLERY
+            CONTACT-US
           </Link>
 
       </div>

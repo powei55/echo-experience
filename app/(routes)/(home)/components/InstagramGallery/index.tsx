@@ -15,7 +15,7 @@ const instagramPosts = [
 
 const InstagramGallery = () => {
   return (
-    <section id="instagram" className="bg-[#f9f7f5] py-16 w-full">
+    <section id="" className="bg-[#f9f7f5] py-16 w-full">
       <div className="text-center mb-10 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           Follow Our Journey

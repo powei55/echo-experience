@@ -61,7 +61,7 @@ const CollectionSection = () => {
           <Link
             href={item.href}
             key={item.id}
-            className="group relative flex flex-col items-center text-center rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 bg-gray-50"
+            className="group relative flex flex-col items-center text-center overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 bg-gray-50"
           >
             {/* Image */}
             <div className="relative w-full h-56 overflow-hidden">
@@ -72,7 +72,7 @@ const CollectionSection = () => {
                 height={800}
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500"></div>
+              {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500"></div> */}
             </div>
 
             {/* Text */}

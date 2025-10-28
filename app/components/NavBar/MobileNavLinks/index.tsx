@@ -55,25 +55,25 @@ const MobileNavLinks: React.FC<Props> = ({ isOpen, onClose }) => {
           </Link>
 
           <Link
-            href="/#brand"
+            href="/#about"
             onClick={() => {
               document.getElementById("brand")?.scrollIntoView({ behavior: "smooth" });
               onClose();
             }}
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
-            BRAND
+            ABOUT-US
           </Link>
 
           <Link
-            href="/#instagram"
+            href="/contact-page"
             onClick={() => {
               document.getElementById("instagram")?.scrollIntoView({ behavior: "smooth" });
               onClose();
             }}
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
-            INSTAGRAM GALLERY
+            CONTACT-US
           </Link>
 
         </motion.div>
