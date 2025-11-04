@@ -9,18 +9,27 @@ const slides = [
   {
     id: 1,
     image: "/assets/8.jpg",
-    title: "Museum Visits",
+    title: "UNCOVER THE MAGIC IN EVERY MOMENT",
     description:
-      "Welcome to Echo Experiences, your gateway to Paris' finest museums.",
-    museums: ["Louvre Museum", "Orsay Museum", "Opera Garnier", "Carnavalet Museum"],
+      "",
+    museums: ["Refined", "Cultural", "Experimental"],
     link: "/museums",
   },
+  //  {
+  //   id: 1,
+  //   image: "/assets/8.jpg",
+  //   title: "Museum Visits",
+  //   description:
+  //     "",
+  //   museums: ["Louvre Museum", "Orsay Museum", "Opera Garnier", "Carnavalet Museum"],
+  //   link: "/museums",
+  // },
   {
     id: 2,
     image: "/assets/16.jpg",
-    title: "Wine Tasting",
+    title: "WINE TASTING",
     description:
-      "Savor exceptional wines and discover the art of French winemaking.",
+      "",
     museums: [
       "Full-day Champagne Visit",
       "Private Parisian Wine tasting with a Sommelier",
@@ -30,9 +39,9 @@ const slides = [
   {
     id: 3,
     image: "/assets/17.jpg",
-    title: "Private Shopping",
+    title: "PRIVATE SHOPPING",
     description:
-      "Indulge in exclusive shopping experiences across Paris’ most iconic spots.",
+      "",
     museums: [
       "Shopping at the historic La Samaritaine",
       "Shopping at Le Marais District",
@@ -42,9 +51,9 @@ const slides = [
   {
     id: 4,
     image: "/assets/11.jpg",
-    title: "Paris Highlight Experiences",
+    title: "PARIS HIGHLIGHT EXPERIENCES",
     description:
-      "Discover the magic of Paris through its culture, cuisine, and charm.",
+      "",
     museums: [
       "Lunch/Dinner Seine River Boat Cruise",
       "Vintage Car Parisian Tour",
@@ -60,37 +69,35 @@ const HomePage = () => {
   const settings: Settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: isPlaying,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 40000,
     pauseOnHover: true,
     arrows: false,
     cssEase: "ease-in-out",
     lazyLoad: "ondemand" as const,
-    appendDots: (dots) => (
-      <div
-        style={{
-          position: "absolute",
-          bottom: "30px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <ul className="flex gap-3">{dots}</ul>
-      </div>
-    ),
-    customPaging: () => (
-      <button
-        type="button"
-        className="relative w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300 focus:outline-none"
-      >
-        <span className="absolute inset-0 rounded-full border border-white/50 scale-0 hover:scale-110 transition-transform duration-300"></span>
-      </button>
-    ),
-  };
+      appendDots: (dots) => (
+        <div
+          style={{
+            position: "absolute",
+            bottom: "18px",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <ul className="flex gap-[3px]">{dots}</ul>
+        </div>
+      ),
+      customPaging: () => (
+        <button
+          type="button"
+          className="w-6 h-6 rounded-full bg-white/40 p-0 hover:bg-white transition-all duration-300 focus:outline-none"
+        />
+      ),
+      };
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -127,17 +134,11 @@ const HomePage = () => {
 
               {/* Glass content box */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-black/70 backdrop-blur-md border border-white/20 p-10 text-center text-white shadow-lg z-10 w-full">
-                  <div className="flex flex-col items-center gap-8 justify-center">
+              <div className="bg-black/30 backdrop-blur-md border border-white/20 p-12 text-center text-white shadow-lg z-10 w-full">
+
+                  <div className="flex flex-col items-center gap-8 md:gap-4 justify-center">
                     {/* Logo + Title */}
-                    <div className="flex flex-col items-center">
-                      <Image
-                        src="/assets/brand.png"
-                        alt="Brand Logo"
-                        width={160}
-                        height={1600}
-                        className="rounded-md object-cover mb-4"
-                      />
+                    <div className="flex flex-col items-center gap-4">
                       <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-2">
                         {slide.title}
                       </h1>
@@ -147,14 +148,14 @@ const HomePage = () => {
                             {slide.description.slice(0, 55)}...
                           </span>
                         )}
-                        <span className="hidden sm:inline">
+                        <span className="hidden sm:inline italic">
                           {slide.description}
                         </span>
                       </p>
                     </div>
 
                     {/* Experiences list */}
-                    <div className="hidden sm:flex text-sm md:text-base font-light tracking-wider flex-wrap justify-center gap-2 text-center">
+                    <div className="hidden sm:flex text-sm md:text-base xl:text-2xl font-light tracking-wider flex-wrap justify-center gap-2 text-center italic">
                       {slide.museums.map((museum, index) => (
                         <React.Fragment key={index}>
                           <span>{museum}</span>

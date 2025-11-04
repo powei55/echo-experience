@@ -18,15 +18,15 @@ const Footer = () => {
   return (
     <footer className="relative bg-[#1c3934] text-gray-100 px-6 md:px-20 py-16">
       {/* Centered Logo */}
-      <div className="flex justify-center mb-12">
+      {/* <div className="flex justify-center mb-4">
         <Image
-          src="/assets/brand.png"
+          src="/assets/logo-black.png"
           alt="Echo Experience Logo"
-          width={160}
-          height={60}
+          width={300}
+          height={300}
           className="object-contain"
         />
-      </div>
+      </div> */}
 
       {/* Three Columns */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 ">
@@ -75,31 +75,13 @@ const Footer = () => {
             Contact
           </h4>
           <p className="text-base md:text-base">
-            Echo Experience Agency
+           Hello@echoexperiences
             <br />
-            Maison of Bespoke Journeys
+             +33 6 12 56 62 18
             <br />
-            23 Rue des Horizons, Paris, France
-          </p>
-          <p className="text-base md:text-base">
-            contact@echoexperience.com
-            <br />
-            +33 (0) 695 716 052
-            <br />
-            +33 (0) 642 714 490
-          </p>
-          <p className="text-sm italic text-gray-400">
-            ps: Feel free to WhatsApp us
+            +33 7 60 00 55 18
           </p>
           <div className="flex gap-5 mt-2 text-lg text-gray-300">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-            >
-              <FaFacebookF />
-            </a>
             <a
               href="https://www.instagram.com/echo.experiences?igsh=MW9uZnRsNTRxMmE3OA=="
               target="_blank"
@@ -114,7 +96,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-gray-700 mt-14 pt-6 flex flex-col md:flex-row justify-between items-center text-sm md:text-xs text-gray-400">
-        <p>Designed by ZedLabs</p>
+        <p>Built by IPM</p>
         <p>@echoexperience</p>
       </div>
 

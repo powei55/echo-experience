@@ -3,18 +3,23 @@
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { wines } from "@/app/data/data";
+import Link from "next/link";
+import { useState } from "react";
+import ReservationModal from "@/app/components/ReservationModal";
 
 const WineDetailsPage = () => {
   const params = useParams();
   const wineId = Number(params.wineId);
   const wine = wines.find((w) => w.id === wineId);
+    const [showModal, setShowModal] = useState(false);
+
+  const [loading, setLoading] = useState(false);
 
   if (!wine) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-[#f9f7f5] text-[#1c3934]">
-        <p className="text-xl">wine details not found.</p>
+        <p className="text-xl">Wine details not found.</p>
       </main>
     );
   }
@@ -42,7 +47,7 @@ const WineDetailsPage = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light"
+            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light italic"
           >
             {wine.description}
           </motion.p>
@@ -62,17 +67,30 @@ const WineDetailsPage = () => {
 
         <div className="flex-1">
           <h2 className="text-3xl font-bold mb-4">{wine.name}</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <p className="text-gray-700 leading-relaxed mb-6 italic">
             {wine.description} Experience exclusive guided tours with expert
             curators and skip-the-line access.
           </p>
-          <p className="text-lg font-semibold text-[#1c3934] mb-6">
+          {/* <p className="text-lg font-semibold text-[#1c3934] mb-6">
             Price: {wine.price}
-          </p>
+          </p> */}
 
-          <button className="px-6 py-3 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
-            Book This Experience
-          </button>
+            <>
+              {/* CTA Button */}
+              <button
+                onClick={() => setShowModal(true)}
+                className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
+              >
+                Book this experience
+              </button>
+
+              {/* Reservation Modal */}
+              <ReservationModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                experienceName={wine.name}
+              />
+            </>
         </div>
       </section>
 

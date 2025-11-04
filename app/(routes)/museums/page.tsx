@@ -11,7 +11,7 @@ const MuseumVisitsPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen w-full">
         <Image
-          src="/assets/9.jpg"
+          src="/assets/68.jpg"
           alt="Museum Visits"
           fill
           className="object-cover object-center"
@@ -30,16 +30,43 @@ const MuseumVisitsPage = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light"
+            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light italic"
           >
             Experience the timeless elegance and art of Paris with our curated museum tours.
           </motion.p>
         </div>
       </section>
-
+      
+            {/* Category Navigation */}
+            <section className="bg-[#c6c8b7]/30 py-8 px-6 flex flex-wrap justify-center gap-4 text-sm md:text-base font-semibold uppercase tracking-widest">
+              <Link
+                href="/museums"
+                className="px-6 py-2 rounded-full bg-[#1c3934] text-[#f9f7f5] hover:bg-[#294f49] transition"
+              >
+                Museum Visits
+              </Link>
+              <Link
+                href="/wine-tasting"
+                className="px-6 py-2 rounded-full bg-[#f9f7f5] text-[#1c3934] border border-[#1c3934] hover:bg-[#1c3934] hover:text-[#f9f7f5] transition"
+              >
+                Wine Tasting
+              </Link>
+              <Link
+                href="/private-shopping"
+                className="px-6 py-2 rounded-full bg-[#f9f7f5] text-[#1c3934] border border-[#1c3934] hover:bg-[#1c3934] hover:text-[#f9f7f5] transition"
+              >
+                Private Shopping
+              </Link>
+              <Link
+                href="/paris-experience"
+                className="px-6 py-2 rounded-full bg-[#f9f7f5] text-[#1c3934] border border-[#1c3934] hover:bg-[#1c3934] hover:text-[#f9f7f5] transition"
+              >
+                Paris Highlights
+              </Link>
+            </section>
       {/* Museum Grid Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10">
           {museums.map((museum, index) => (
             <Link href={`/museums/${museum.id}`} key={museum.id}>
               <motion.div
@@ -77,9 +104,9 @@ const MuseumVisitsPage = () => {
                   <p className="text-gray-700 text-sm mb-4 line-clamp-3">
                     {museum.description}
                   </p>
-                  <p className="text-[#1c3934]/80 font-semibold mb-3">
+                  {/* <p className="text-[#1c3934]/80 font-semibold mb-3">
                     From {museum.price}
-                  </p>
+                  </p> */}
                   <button className="px-5 py-2 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
                     View Details
                   </button>

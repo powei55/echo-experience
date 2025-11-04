@@ -30,7 +30,7 @@ const WineTastingSection = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light"
+            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light italic"
           >
             Savor the finest French wines and learn the secrets of winemaking
             with expert sommeliers.
@@ -67,8 +67,8 @@ const WineTastingSection = () => {
       </section>
 
       {/* Wine Grid Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {wines.map((wine, index) => (
             <Link
               key={wine.id}
@@ -105,11 +105,11 @@ const WineTastingSection = () => {
                   transition={{ duration: 0.4 }}
                   className="p-6 text-center"
                 >
-                  <p className="text-[#1c3934]/80 font-semibold mb-3">
+                  {/* <p className="text-[#1c3934]/80 font-semibold mb-3">
                     From {wine.price}
-                  </p>
+                  </p> */}
                   <button className="px-5 py-2 bg-[#1c3934] text-[#f9f7f5] rounded-full group-hover:bg-[#294f49] transition cursor-pointer">
-                    Book Now
+                    Details
                   </button>
                 </motion.div>
               </motion.div>

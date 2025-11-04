@@ -1,15 +1,18 @@
 "use client";
-
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { museums } from "@/app/data/data";
+import ReservationModal from "@/app/components/ReservationModal";
+
 
 const MuseumDetailsPage = () => {
   const params = useParams();
   const museumId = Number(params.museumId);
   const museum = museums.find((m) => m.id === museumId);
+  const [showModal, setShowModal] = useState(false);
 
   if (!museum) {
     return (
@@ -18,6 +21,202 @@ const MuseumDetailsPage = () => {
       </main>
     );
   }
+
+  // =====================================================
+  // Unique Louvre Museum Page
+  // =====================================================
+  if (museum.name.toLowerCase().includes("louvre")) {
+    return (
+      <main className="w-full bg-[#f9f7f5] text-[#1c3934]">
+        {/* Hero Section */}
+        <section className="relative h-[80vh] w-full">
+          <Image
+            src={museum.img}
+            alt={museum.name}
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#1c3934]/70 flex flex-col justify-center items-center text-center px-6">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl font-bold text-[#f9f7f5] tracking-wider mb-4"
+            >
+              The Louvre Experiences
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+              className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light italic"
+            >
+              Step into the world’s greatest museum through two private journeys crafted for the art connoisseur.
+            </motion.p>
+          </div>
+        </section>
+
+        {/* Details Section (Louvre Experiences) */}
+        <section className="py-24 px-6 md:px-16 lg:px-32 space-y-24">
+          {/* Experience 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="flex flex-col md:flex-row items-center gap-12"
+          >
+            <div className="relative w-full md:w-1/2 h-[420px] rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="/assets/61.jpg"
+                alt="Private Visit of the Louvre"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+              /> 
+            </div>
+
+            <div className="flex-1">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#1c3934]">
+                Private Visit of the Louvre: Masterpieces & Marvels
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6 italic">
+                Make your first visit to the Louvre a memorable one. Walk through the walls
+                of this 800+ year-old monument and marvel at its most famous masterpieces.
+                Your private art historian leads you from the medieval Louvre to ancient
+                Egypt, through classical Greek sculptures like Venus de Milo and the Winged
+                Victory of Samothrace, to the Mona Lisa herself. This is elegant storytelling
+                — not a checklist — shaped by your curiosity.
+              </p>
+              <p className="text-gray-700 mb-6 italic">
+                End your visit with lunch or dinner and a glass of champagne overlooking the iconic pyramid
+                of the Louvre.
+              </p>
+
+              <ul className="space-y-2 text-gray-800 mb-6 italic">
+                <li>• Private licensed art historian</li>
+                <li>• Skip-the-line access</li>
+                <li>• Hotel pickup to the Louvre</li>
+                <li>• Lunch or dinner with a glass of champagne at the magnificent Café Marly</li>
+              </ul>
+
+              <p className="text-sm text-gray-600 mb-4 italic">
+                <strong>Why it’s special:</strong> Seamless navigation, expert storytelling,
+                and time to appreciate the icons rather than rush through them.
+              </p>
+              <p className="text-sm text-gray-600 mb-2 italic">
+                <strong>Duration:</strong> 2.5 hours
+              </p>
+              <p className="text-sm text-gray-600 mb-2 italic">
+                <strong>Cost:</strong> From €890 for two guests
+              </p>
+              <p className="text-sm text-gray-600 mb-8 italic">
+                <strong>Availability:</strong> Year-round, limited private slots weekly.
+              </p>
+            <>
+              {/* CTA Button */}
+              <button
+                onClick={() => setShowModal(true)}
+                className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
+              >
+                Book this experience
+              </button>
+
+              {/* Reservation Modal */}
+              <ReservationModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                experienceName={museum.name}
+              />
+            </>
+            </div>
+          </motion.div>
+
+          {/* Experience 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col md:flex-row-reverse items-center gap-12"
+          >
+            <div className="relative w-full md:w-1/2 h-[420px] rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="/assets/65.jpg"
+                alt="The Louvre After Hours"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+
+            <div className="flex-1">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#1c3934]">
+                The Louvre After Hours: A Night Among the Masters
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6 italic">
+                When the crowds have gone and the lights dim, the Louvre becomes something
+                extraordinary — still, echoing, and utterly yours. This private after-hours
+                experience grants exclusive access to the museum’s permanent collection,
+                tailored to your taste, delivered by a senior curator and your personal Echo
+                Experiences concierge.
+              </p>
+              <p className="text-gray-700 mb-6 italic">
+                Begin with a glass of champagne overlooking the iconic pyramid before
+                stepping into the quiet halls. Wander among the masters or enjoy an intimate
+                dinner with a private chef after your visit — arranged upon request.
+              </p>
+
+              <ul className="space-y-2 text-gray-800 mb-6 italic">
+                <li>• Private access after closing hours</li>
+                <li>• Senior curator-led tour</li>
+                <li>• Echo Experiences concierge</li>
+                <li>• Optional private dinner experience</li>
+              </ul>
+
+              <p className="text-sm text-gray-600 mb-4 italic">
+                <strong>Why it’s special:</strong> Intimacy with art — the world pauses just
+                for you.
+              </p>
+              <p className="text-sm text-gray-600 mb-2 italic">
+                <strong>Duration:</strong> 3 hours
+              </p>
+              <p className="text-sm text-gray-600 mb-2 italic">
+                <strong>Guests:</strong> Up to 10 max (more on request)
+              </p>
+              <p className="text-sm text-gray-600 mb-8 italic">
+                <strong>Cost:</strong> From €55,000 — availability upon request.
+              </p>
+                <>
+              {/* CTA Button */}
+              <button
+                onClick={() => setShowModal(true)}
+                className=" text-white px-6 py-3 rounded-xl  transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
+              >
+                Book this experience
+              </button>
+
+              {/* Reservation Modal */}
+              <ReservationModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                experienceName={museum.name} 
+              />
+            </>
+            </div>
+           
+          </motion.div>
+        </section>
+
+        <div className="text-center py-16">
+          <Link href="/museums" className="text-[#1c3934] underline hover:text-[#294f49]">
+            ← Back to All Museums
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
+  // =====================================================
+  // General Page for All Other Museums (Dynamic)
+  // =====================================================
+  const details = museum.details;
 
   return (
     <main className="w-full bg-[#f9f7f5] text-[#1c3934]">
@@ -42,7 +241,7 @@ const MuseumDetailsPage = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light"
+            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light italic"
           >
             {museum.description}
           </motion.p>
@@ -50,30 +249,64 @@ const MuseumDetailsPage = () => {
       </section>
 
       {/* Details Section */}
-      <section className="py-20 px-6 md:px-16 lg:px-32 flex flex-col md:flex-row items-center gap-12">
-        <div className="relative w-full md:w-1/2 h-[400px] rounded-2xl overflow-hidden shadow-lg">
-          <Image
-            src={museum.img}
-            alt={museum.name}
-            fill
-            className="object-cover"
-          />
-        </div>
+      <section className="py-24 px-6 md:px-16 lg:px-32 space-y-24">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="flex flex-col md:flex-row items-center gap-12"
+        >
+          <div className="relative w-full md:w-1/2 h-[420px] rounded-3xl overflow-hidden shadow-lg">
+            <Image
+              src={museum?.img || ""}
+              alt={museum?.name || ""}
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
 
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-4">{museum.name}</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            {museum.description} Experience exclusive guided tours with expert
-            curators and skip-the-line access.
-          </p>
-          <p className="text-lg font-semibold text-[#1c3934] mb-6">
-            Price: {museum.price}
-          </p>
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#1c3934]">
+              {details?.title}
+            </h2>
 
-          <button className="px-6 py-3 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
-            Book This Experience
-          </button>
-        </div>
+            {details?.fullDescription?.map((paragraph, index) => (
+              <p key={index} className="text-gray-700 leading-relaxed mb-6 italic">
+                {paragraph}
+              </p>
+            ))}
+
+            <ul className="space-y-2 text-gray-800 mb-6 italic">
+              {details?.highlights?.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+
+            <p className="text-sm text-gray-600 mb-2 italic">
+              <strong>Duration:</strong> {details?.duration}
+            </p>
+            <p className="text-sm text-gray-600 mb-2 italic">
+              <strong>Cost:</strong> {details?.cost}
+            </p>
+
+             <>
+              {/* CTA Button */}
+              <button
+                onClick={() => setShowModal(true)}
+                className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
+              >
+                Book this experience
+              </button>
+
+              {/* Reservation Modal */}
+              <ReservationModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                experienceName={museum.name}
+              />
+            </>
+          </div>
+        </motion.div>
       </section>
 
       <div className="text-center pb-16">

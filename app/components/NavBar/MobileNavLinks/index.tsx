@@ -33,17 +33,17 @@ const MobileNavLinks: React.FC<Props> = ({ isOpen, onClose }) => {
           </Link>
 
           <Link
-            href="/#gallery"
+            href="/#services"
             onClick={() => {
-              document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
               onClose();
             }}
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
-            GALLERY
+            SERVICES
           </Link>
 
-          <Link
+          {/* <Link
             href="/#testimony"
             onClick={() => {
               document.getElementById("testimony")?.scrollIntoView({ behavior: "smooth" });
@@ -52,14 +52,10 @@ const MobileNavLinks: React.FC<Props> = ({ isOpen, onClose }) => {
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
             TESTIMONY
-          </Link>
+          </Link> */}
 
           <Link
-            href="/#about"
-            onClick={() => {
-              document.getElementById("brand")?.scrollIntoView({ behavior: "smooth" });
-              onClose();
-            }}
+            href="/about-us"
             className="uppercase hover:text-gray-300 tracking-widest text-sm"
           >
             ABOUT-US

@@ -1,15 +1,19 @@
 "use client";
-
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ParisExperienceSections } from "@/app/data/data";
+import ReservationModal from "@/app/components/ReservationModal";
 
 const ExperienceDetailsPage = () => {
   const params = useParams();
   const parisId = Number(params.parisId);
   const experience = ParisExperienceSections.find((e) => e.id === parisId);
+  const [showModal, setShowModal] = useState(false);
+
+    const [loading, setLoading] = useState(false);
 
   if (!experience) {
     return (
@@ -34,7 +38,7 @@ const ExperienceDetailsPage = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-[#f9f7f5] tracking-wider mb-4"
+            className="text-4xl  font-bold text-[#f9f7f5] tracking-wider mb-4"
           >
             {experience.name}
           </motion.h1>
@@ -42,7 +46,7 @@ const ExperienceDetailsPage = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light"
+            className="text-[#f9f7f5]/90 max-w-3xl text-lg md:text-xl font-light italic"
           >
             {experience.description}
           </motion.p>
@@ -62,17 +66,30 @@ const ExperienceDetailsPage = () => {
 
         <div className="flex-1">
           <h2 className="text-3xl font-bold mb-4">{experience.name}</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <p className="text-gray-700 leading-relaxed mb-6 italic">
             {experience.description} Experience exclusive guided tours with expert
             curators and skip-the-line access.
           </p>
-          <p className="text-lg font-semibold text-[#1c3934] mb-6">
+          {/* <p className="text-lg font-semibold text-[#1c3934] mb-6">
             Price: {experience.price}
-          </p>
+          </p> */}
 
-          <button className="px-6 py-3 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
-            Book This Experience
-          </button>
+          <>
+              {/* CTA Button */}
+              <button
+                onClick={() => setShowModal(true)}
+                className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
+              >
+                Book this experience
+              </button>
+
+              {/* Reservation Modal */}
+              <ReservationModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                experienceName={experience.name}
+              />
+            </>
         </div>
       </section>
 

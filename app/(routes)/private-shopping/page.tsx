@@ -30,7 +30,7 @@ const PrivateShopping = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light"
+            className="text-[#f9f7f5]/90 max-w-2xl text-lg md:text-xl font-light italic"
           >
             Enjoy exclusive access to Paris’s most luxurious boutiques and
             hidden shopping treasures.
@@ -67,8 +67,8 @@ const PrivateShopping = () => {
       </section>
 
       {/* Shopping Grid Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
           {shoppings.map((shopping, index) => (
             <Link key={shopping.id} href={`/private-shopping/${shopping.id}`}>
               <motion.div
@@ -101,10 +101,10 @@ const PrivateShopping = () => {
                   transition={{ duration: 0.4 }}
                   className="p-6 text-center"
                 >
-                  <p className="text-[#1c3934]/80 font-semibold mb-3">
+                  {/* <p className="text-[#1c3934]/80 font-semibold mb-3">
                     From {shopping.price}
-                  </p>
-                  <button className="px-5 py-2 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
+                  </p> */}
+                  <button className="px-5 py-2 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition cursor-pointer">
                     View Details
                   </button>
                 </motion.div>
