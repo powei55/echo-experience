@@ -2,31 +2,16 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-/* :root {
-  --font-nunito_sans: 'Nunito Sans', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-lato: 'Lato', sans-serif;
-} */
 
-/* Custom Grande font */
-@font-face {
-  font-family: "Grande";
-  src: url("/fonts/Grande-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ======= Base Typography ======= */
-html,
+@html,
 body {
- font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-libre_baskerville), sans-serif;
   scroll-behavior: smooth;
 }
 
-/* Headings use Grande for elegant style */
+/* Headings use Libre Baskerville for elegant serif look */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair_display), serif;
+  font-family: var(--font-libre_baskerville), serif;
   letter-spacing: 0.5px;
 }
 
@@ -52,14 +37,14 @@ a:hover {
 
 /* Slick Dots Styling */
 .slick-dots {
-  bottom: 25px !important;
+  bottom: 18px !important;
   display: flex !important;
   justify-content: center;
   align-items: center;
 }
 
 .slick-dots li {
-  margin: 0 6px !important;
+  margin: 0 6px !important; /* smaller spacing */
   position: relative;
 }
 
@@ -68,16 +53,19 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  width: 12px !important;   /* shrink clickable area */
+  height: 12px !important;  /* shrink clickable area */
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Dot Base */
 .slick-dots li button:before {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 1px;  /* tiny dot */
+  height: .6px; /* tiny dot */
   background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
+  border-radius: 100%;
   transition: all 0.3s ease;
   opacity: 0.8;
 }
@@ -94,21 +82,18 @@ a:hover {
   opacity: 1;
 }
 
-/* Circle Ring for Active Dot */
+/* Optional ring for active (tiny) */
 .slick-dots li.slick-active button::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 16px;
-  height: 16px;
+  width: 1px;
+  height:.6px;
   transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
   transition: all 0.3s ease;
-}
-
-/* Optional hover ring preview */
-.slick-dots li:hover button::after {
-  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Input file button */
