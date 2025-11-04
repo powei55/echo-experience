@@ -135,27 +135,19 @@ const HomePage = () => {
               {/* Glass content box */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white shadow-lg z-10">
-
                   <div className="flex flex-col items-center gap-8 md:gap-4 justify-center">
-                    {/* Logo + Title */}
+                    {/* Title + Description */}
                     <div className="flex flex-col items-center gap-4">
                       <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-2">
                         {slide.title}
                       </h1>
-                      <p className="text-base md:text-lg font-light tracking-wide opacity-90">
-                        {slide.description.length > 60 && (
-                          <span className="sm:hidden">
-                            {slide.description.slice(0, 55)}...
-                          </span>
-                        )}
-                        <span className="hidden sm:inline italic">
-                          {slide.description}
-                        </span>
+                      <p className="text-base md:text-lg font-light tracking-wide opacity-90 italic text-center px-4">
+                        {slide.description}
                       </p>
                     </div>
 
                     {/* Experiences list */}
-                    <div className="hidden sm:flex text-sm md:text-base xl:text-2xl font-light tracking-wider flex-wrap justify-center gap-2 text-center italic">
+                    <div className="flex text-sm md:text-base xl:text-2xl font-light tracking-wider flex-wrap justify-center gap-2 text-center italic">
                       {slide.museums.map((museum, index) => (
                         <React.Fragment key={index}>
                           <span>{museum}</span>
@@ -177,6 +169,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         ))}
