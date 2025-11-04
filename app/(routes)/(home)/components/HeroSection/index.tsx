@@ -130,11 +130,11 @@ const HomePage = () => {
               }}
             >
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/60" />
 
               {/* Glass content box */}
               <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-black/30 backdrop-blur-md border border-white/20 p-12 text-center text-white shadow-lg z-10 w-full">
+                <div className="text-center text-white shadow-lg z-10">
 
                   <div className="flex flex-col items-center gap-8 md:gap-4 justify-center">
                     {/* Logo + Title */}
