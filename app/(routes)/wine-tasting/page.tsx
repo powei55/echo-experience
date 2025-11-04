@@ -105,6 +105,9 @@ const WineTastingSection = () => {
                   transition={{ duration: 0.4 }}
                   className="p-6 text-center"
                 >
+                    <p className="text-[#1c3934]/70 mb-4 text-sm md:text-base leading-relaxed italic">
+                    {wine.description}
+                  </p>
                   {/* <p className="text-[#1c3934]/80 font-semibold mb-3">
                     From {wine.price}
                   </p> */}
