@@ -74,13 +74,28 @@ const Footer = () => {
           <h4 className="text-lg md:text-base font-semibold uppercase tracking-wider text-white mb-2">
             Contact
           </h4>
-          <p className="text-base md:text-base">
-           Hello@echoexperiences
-            <br />
-             +33 6 12 56 62 18
-            <br />
+        <p className="text-base md:text-base">
+          <a
+            href="mailto:hello@echoexperiences.com"
+            className="hover:underline"
+          >
+            hello@echoexperiences.com
+          </a>
+          <br />
+          <a
+            href="tel:+33612566218"
+            className="hover:underline"
+          >
+            +33 6 12 56 62 18
+          </a>
+          <br />
+          <a
+            href="tel:+33760005518"
+            className="hover:underline"
+          >
             +33 7 60 00 55 18
-          </p>
+          </a>
+        </p>
           <div className="flex gap-5 mt-2 text-lg text-gray-300">
             <a
               href="https://www.instagram.com/echo.experiences?igsh=MW9uZnRsNTRxMmE3OA=="
