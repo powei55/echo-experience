@@ -42,21 +42,21 @@ const CollectionSection = () => {
   return (
     <section
       id="experience"
-      className="w-full mx-auto py-20 px-6 xl:w-[70%] bg-white text-center"
+      className="w-full mx-auto py-20 px-6 bg-white text-center"
     >
       {/* Section Header */}
       <div className="max-w-3xl mx-auto mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
           Our Collection of Experiences
         </h2>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed italic">
           Explore handpicked Parisian experiences designed to connect you with
           art, taste, culture, and timeless elegance.
         </p>
       </div>
 
       {/* Experiences Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-4  gap-8">
         {experiences.map((item) => (
           <Link
             href={item.href}
@@ -80,7 +80,7 @@ const CollectionSection = () => {
               <h3 className="text-xl font-semibold capitalize mb-2 text-gray-900">
                 {item.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed italic">
                 {item.description}
               </p>
             </div>
