@@ -3,7 +3,7 @@ export const museums = [
     id: 1,
     name: "Louvre Museum",
     price: "€120",
-    img: "/assets/9.jpg",
+    img: "/assets/66.jpg",
     description:
       "Explore the world’s largest art museum, home to the Mona Lisa and countless masterpieces from antiquity to the Renaissance.",
   },
@@ -11,33 +11,117 @@ export const museums = [
     id: 2,
     name: "Orsay Museum",
     price: "€100",
-    img: "/assets/12.jpg",
+    img: "/assets/56.jpg",
     description:
       "Admire stunning Impressionist art by Monet, Van Gogh, and Degas in this converted Beaux-Arts railway station.",
+    details: {
+      title: "Private Visit of Orsay Museum",
+      intro:
+        "Experience Paris through the eyes of its most famous artists. The Musée d’Orsay is one of those places that changes the way you see art.",
+      fullDescription: [
+        "Once a Beaux-Arts railway station, today it’s home to the world’s most celebrated collection of Impressionist and Post-Impressionist masterpieces.",
+        "Inside, sunlight floods through the glass roof, glazing over the works of Monet, Renoir, Degas, Cézanne, and Van Gogh — artists who redefined beauty and captured modern life with bold color and emotion.",
+        "Your private guide connects the dots between their lives, their friendships, and the Paris they painted. Between galleries, pause to admire the building itself, a masterpiece in its own right.",
+        "End your visit with a Champagne moment on the museum’s terrace, overlooking the Seine and the Louvre — a perfect finish to an experience filled with color, culture, and story.",
+      ],
+      highlights: [
+        "• Private art historian",
+        "• Skip-the-line access",
+        "• Hotel pick-up to the museum",
+        "• Champagne moment on the terrace",
+      ],
+      duration: "2.5 hours",
+      groupSize: "6 guests maximum (more on request)",
+      cost: "From €750 for two guests",
+    },
   },
   {
     id: 3,
     name: "Opera Garnier",
     price: "€90",
-    img: "/assets/5.jpg",
+    img: "/assets/67.jpg",
     description:
       "Step into opulence and history at Paris’s grand opera house — an architectural masterpiece of the 19th century.",
+    details: {
+      title: "Private Visit of Opéra Garnier",
+      intro:
+        "For design lovers, architecture enthusiasts, and anyone who loves a touch of theatre.",
+      fullDescription: [
+        "The Palais Garnier is one of the most stunning buildings in Paris — a true symbol of 19th-century glamour and architectural mastery.",
+        "Designed by Charles Garnier, it’s a perfect harmony of marble, gold leaf, and crystal. Once inside, the grand staircase itself feels like a performance.",
+        "Your private guide leads you through the ornate foyers, lavish auditorium, and private boxes once reserved for Paris’s elite. You’ll hear stories of the Belle Époque and the legend that inspired *The Phantom of the Opera*.",
+        "Look up to admire Marc Chagall’s fresco — a colorful counterpoint to the old-world glamour. It’s a perfect reflection of Paris: timeless yet always reinventing.",
+        "For a truly special experience, opt for a live performance, with Champagne service and private transfers.",
+      ],
+      highlights: [
+        "• Private guided visit",
+        "• Skip-the-line access",
+        "• Chauffeur pickup from your hotel to Opera Garnier",
+        "• Performance reservation upon request",
+        "• Lunch or dinner at a nearby restaurant to conclude the visit",
+      ],
+      duration: "2.5 hours",
+      groupSize: "6 guests maximum",
+      cost: "From €890 for two guests",
+    },
   },
   {
     id: 4,
     name: "Carnavalet Museum",
     price: "€80",
-    img: "/assets/1.jpg",
+    img: "/assets/63.jpg",
     description:
       "Journey through the history of Paris from its origins to the present in this charming and beautifully restored mansion.",
+    details: {
+      title: "Private Visit of Musée Carnavalet",
+      intro:
+        "For anyone who loves Paris and wants to understand how it became the city it is today.",
+      fullDescription: [
+        "The Musée Carnavalet, tucked inside the Marais, tells the full story of Paris from its earliest days to the modern era.",
+        "With your private guide, you’ll walk through centuries in a single afternoon — from the salons of the aristocracy to the chaos of the Revolution, and the rise of art and fashion.",
+        "See portraits of revolutionaries, furniture from royal homes, and signs from old Parisian shops. Hear echoes of freedom from WWII declared by General Charles de Gaulle.",
+        "After your visit, stroll through the Marais with your guide, where medieval streets meet designer boutiques — and enjoy lunch in one of its cozy cafés.",
+      ],
+      highlights: [
+        "• Private historian guide",
+        "• Skip-the-line access",
+        "• Chauffeur pickup from your hotel to the museum",
+        "• Lunch in the Marais district",
+      ],
+      duration: "2.5 hours",
+      groupSize: "6 guests maximum",
+      cost: "From €890 for two guests",
+    },
   },
   {
     id: 5,
     name: "Versailles Palace",
     price: "€150",
-    img: "/assets/3.jpg",
+    img: "/assets/69.jpg",
     description:
       "Walk in the footsteps of French royalty in the Hall of Mirrors and gardens of this UNESCO World Heritage site.",
+    details: {
+      title: "Private Visit of Versailles Palace",
+      intro:
+        "For guests who want to step into France’s royal past and see how grandeur was truly lived.",
+      fullDescription: [
+        "Versailles is not just a palace — it’s a statement of power, art, and ambition. Built for Louis XIV, the 'Sun King,' this magnificent estate redefined royal living.",
+        "With your private historian, walk through the Hall of Mirrors, the King’s and Queen’s Apartments, and secret corridors most visitors never see.",
+        "Hear the stories of court life — how etiquette ruled every move, how alliances were sealed with a dance, and how Versailles became a model of royal power across Europe.",
+        "Step outside to marvel at the vast gardens, filled with fountains, sculptures, and geometric perfection, designed to show that the king ruled even nature itself.",
+        "Enhance your day with a carriage ride through the gardens or a private visit to Marie Antoinette’s Petit Trianon.",
+      ],
+      highlights: [
+        "• Private historian guide",
+        "• Skip-the-line entry",
+        "• Private roundtrip chauffeur",
+        "• Lunch at Ore – restaurant by Michelin chef Alain Ducasse",
+        "• Optional gourmet picnic during summer season",
+      ],
+      duration: "5 hours (half-day) or 8 hours (full-day, on request)",
+      groupSize: "6 guests maximum",
+      cost: "From €1,450 for two guests",
+    },
   },
 ];
 
@@ -46,7 +130,7 @@ export const ParisExperienceSections = [
     id: 1,
     name: "Lunch/Dinner Seine River Boat Cruise",
     price: "€120",
-    img: "/assets/9.jpg",
+    img: "/assets/57.jpg",
     description:
       "Glide along the Seine River and enjoy a delicious lunch or dinner as the city of Paris sparkles around you. This relaxing cruise combines great food, live music, and unforgettable views of the Eiffel Tower and other landmarks.",
   },
@@ -62,7 +146,7 @@ export const ParisExperienceSections = [
     id: 3,
     name: "Paris Full Day Magic: Montmartre, Nôtre Dame, Louvre, Seine River Boat Cruise",
     price: "€90",
-    img: "/assets/5.jpg",
+    img: "/assets/58.jpg",
     description:
       "Spend a full day discovering the magic of Paris — from the bohemian charm of Montmartre to the beauty of Nôtre Dame and the art-filled halls of the Louvre. End your day with a relaxing Seine River cruise as the city lights come alive.",
   },
@@ -70,7 +154,7 @@ export const ParisExperienceSections = [
     id: 4,
     name: "Paris Île de la Cité Experience: Notre Dame, St. Chapelle, La Conciergerie, Pont Neuf",
     price: "€80",
-    img: "/assets/1.jpg",
+    img: "/assets/8.jpg",
     description:
       "Explore the heart of historic Paris on Île de la Cité. Visit the majestic Notre Dame, the stained-glass wonder of Sainte-Chapelle, and the royal halls of La Conciergerie. Stroll across the famous Pont Neuf and feel the city’s timeless spirit all around you.",
   },
@@ -81,7 +165,7 @@ export const shoppings = [
     id: 1,
     name: "Shopping at the Historic La Samaritaine",
     price: "€120",
-    img: "/assets/17.jpg",
+    img: "/assets/45.jpg",
     description:
       "Step inside one of Paris’s most iconic department stores, blending timeless architecture with the latest in luxury shopping and dining.",
     href: "/shopping/la-samaritaine",
@@ -90,7 +174,7 @@ export const shoppings = [
     id: 2,
     name: "Shopping at Le Marais District",
     price: "€100",
-    img: "/assets/19.jpg",
+    img: "/assets/44.jpg",
     description:
       "Wander through cobblestone streets lined with trendy boutiques, vintage stores, and Parisian cafés in the heart of Le Marais.",
     href: "/shopping/le-marais",
@@ -99,7 +183,7 @@ export const shoppings = [
     id: 3,
     name: "Antique Shopping at Puces de Saint-Ouen",
     price: "€90",
-    img: "/assets/18.jpg",
+    img: "/assets/33.jpg",
     description:
       "Discover Paris’s famous flea market — a treasure trove of antiques, art, and unique finds for those who love a bit of history.",
     href: "/shopping/puces-de-saint-ouen",
