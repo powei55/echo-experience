@@ -23,7 +23,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const response = await fetch("https://formspree.io/f/xdkpabyg", {
+    const response = await fetch("https://formspree.io/f/xzzklgdv", {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
