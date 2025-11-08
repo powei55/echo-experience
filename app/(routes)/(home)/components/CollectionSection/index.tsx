@@ -33,7 +33,7 @@ const experiences = [
     title: "Paris Highlight Experiences",
     description:
       "Discover the charm of Paris through unforgettable cultural, culinary, and scenic adventures.",
-    image: "/assets/7.jpg",
+    image: "/assets/76.jpg",
     href: "/paris-experience",
   },
 ];
