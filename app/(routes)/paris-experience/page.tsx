@@ -12,7 +12,7 @@ const ParisExperienceSection = () => {
       {/* Hero Section */}
       <section className="relative h-screen w-full">
         <Image
-          src="/assets/7.jpg"
+          src="/assets/76.jpg"
           alt="Paris Highlights"
           fill
           className="object-cover object-center"
