@@ -19,7 +19,7 @@ const wineServices = [
     title: "Vineyard Visits & Exclusive Winemaker Access",
     description:
       "Travel through Bordeaux, Champagne, Loire Valley, and Corsica to meet celebrated winemakers, explore centuries-old vineyards, and savor France’s most exquisite vintages.",
-    image: "/assets/14.jpg",
+    image: "/assets/80.jpg",
   },
 ];
 

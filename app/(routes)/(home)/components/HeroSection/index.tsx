@@ -26,7 +26,7 @@ const slides = [
   // },
   {
     id: 2,
-    image: "/assets/16.jpg",
+    image: "/assets/81.jpg",
     title: "WINE TASTING",
     description:
       "",
@@ -50,7 +50,7 @@ const slides = [
   },
   {
     id: 4,
-    image: "/assets/11.jpg",
+    image: "/assets/76.jpg",
     title: "PARIS HIGHLIGHT EXPERIENCES",
     description:
       "",
@@ -134,7 +134,7 @@ const HomePage = () => {
 
               {/* Glass content box */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white shadow-lg z-10">
+                <div className="text-center text-white  z-10">
                   <div className="flex flex-col items-center gap-8 md:gap-4 justify-center">
                     {/* Title + Description */}
                     <div className="flex flex-col items-center gap-4">

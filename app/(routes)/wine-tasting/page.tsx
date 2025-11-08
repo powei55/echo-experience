@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { wines } from "@/app/data/data";
+import CategoryNav from "@/app/components/CategoryNav";
 
 const WineTastingSection = () => {
   return (
@@ -11,7 +12,7 @@ const WineTastingSection = () => {
       {/* Hero Section */}
       <section className="relative h-screen w-full">
         <Image
-          src="/assets/15.jpg"
+          src="/assets/81.jpg"
           alt="Museum Visits"
           fill
           className="object-cover object-center"
@@ -39,32 +40,7 @@ const WineTastingSection = () => {
       </section>
 
       {/* Category Navigation */}
-      <section className="bg-[#c6c8b7]/30 py-8 px-6 flex flex-wrap justify-center gap-4 text-sm md:text-base font-semibold uppercase tracking-widest">
-        <Link
-          href="/museums"
-          className="px-6 py-2 rounded-full bg-[#1c3934] text-[#f9f7f5] hover:bg-[#294f49] transition"
-        >
-          Museum Visits
-        </Link>
-        <Link
-          href="/wine-tasting"
-          className="px-6 py-2 rounded-full bg-[#f9f7f5] text-[#1c3934] border border-[#1c3934] hover:bg-[#1c3934] hover:text-[#f9f7f5] transition"
-        >
-          Wine Tasting
-        </Link>
-        <Link
-          href="/private-shopping"
-          className="px-6 py-2 rounded-full bg-[#f9f7f5] text-[#1c3934] border border-[#1c3934] hover:bg-[#1c3934] hover:text-[#f9f7f5] transition"
-        >
-          Private Shopping
-        </Link>
-        <Link
-          href="/paris-experience"
-          className="px-6 py-2 rounded-full bg-[#f9f7f5] text-[#1c3934] border border-[#1c3934] hover:bg-[#1c3934] hover:text-[#f9f7f5] transition"
-        >
-          Paris Highlights
-        </Link>
-      </section>
+      <CategoryNav />
 
       {/* Wine Grid Section */}
       <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">

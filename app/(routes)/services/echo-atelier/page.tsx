@@ -84,7 +84,7 @@ const EchoAtelierPage = () => {
                   {/* CTA Button */}
                   <button
                     onClick={() => setSelectedService(service.title)}
-                    className="mt-6 inline-block w-1/3 text-center bg-[#1c3934] text-white px-5 py-3 rounded-lg font-medium hover:bg-[#294f49] transition-all duration-300 cursor-pointer"
+                    className="mt-6 inline-block w-full md:w-1/3 text-center bg-[#1c3934] text-white px-5 py-3 rounded-lg font-medium hover:bg-[#294f49] transition-all duration-300 cursor-pointer"
                   >
                     Request This Service
                   </button>

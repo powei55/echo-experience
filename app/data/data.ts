@@ -154,7 +154,7 @@ export const ParisExperienceSections = [
     id: 4,
     name: "Paris Île de la Cité Experience: Notre Dame, St. Chapelle, La Conciergerie, Pont Neuf",
     price: "€80",
-    img: "/assets/8.jpg",
+    img: "/assets/78.jpg",
     description:
       "Explore the heart of historic Paris on Île de la Cité. Visit the majestic Notre Dame, the stained-glass wonder of Sainte-Chapelle, and the royal halls of La Conciergerie. Stroll across the famous Pont Neuf and feel the city’s timeless spirit all around you.",
   },
@@ -174,7 +174,7 @@ export const shoppings = [
     id: 2,
     name: "Shopping at Le Marais District",
     price: "€100",
-    img: "/assets/44.jpg",
+    img: "/assets/75.jpg",
     description:
       "Wander through cobblestone streets lined with trendy boutiques, vintage stores, and Parisian cafés in the heart of Le Marais.",
     href: "/shopping/le-marais",
@@ -183,7 +183,7 @@ export const shoppings = [
     id: 3,
     name: "Antique Shopping at Puces de Saint-Ouen",
     price: "€90",
-    img: "/assets/33.jpg",
+    img: "/assets/74.jpg",
     description:
       "Discover Paris’s famous flea market — a treasure trove of antiques, art, and unique finds for those who love a bit of history.",
     href: "/shopping/puces-de-saint-ouen",
@@ -192,7 +192,7 @@ export const shoppings = [
     id: 4,
     name: "Shopping at La Vallée Village",
     price: "€80",
-    img: "/assets/17.jpg",
+    img: "/assets/77.jpg",
     description:
       "Enjoy open-air luxury shopping with exclusive designer discounts just outside Paris — perfect for a relaxed, stylish day out.",
     href: "/shopping/la-vallee-village",
@@ -212,7 +212,7 @@ export const wines = [
     id: 2,
     name: "Full-Day Champagne Region Visit",
     price: "€100",
-    img: "/assets/14.jpg",
+    img: "/assets/79.jpg",
     description:
       "Escape to the legendary Champagne countryside for a day of cellar tours, vineyard walks, and bubbly indulgence.",
   },

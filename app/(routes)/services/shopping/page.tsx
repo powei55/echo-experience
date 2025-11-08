@@ -35,7 +35,7 @@ const PrivateShoppingPage = () => {
   return (
     <main className="bg-[#f9f7f5]/90 text-[#1c3934] min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/assets/33.jpg')] bg-cover bg-center">
+      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/assets/73.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-[#1c3934]/70"></div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

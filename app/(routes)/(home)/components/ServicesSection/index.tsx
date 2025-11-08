@@ -25,7 +25,7 @@ const services = [
     title: "Private Shopping & Couture Access",
     description:
       "Exclusive access to Parisian designers, couture ateliers, and luxury maisons curated for your personal style.",
-    image: "/assets/33.jpg",
+    image: "/assets/73.jpg",
     href: "/services/shopping",
   },
   {

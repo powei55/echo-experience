@@ -17,7 +17,7 @@ const experiences = [
     title: "Wine Tasting",
     description:
       "Savor the finest French wines and learn the secrets of winemaking with expert sommeliers.",
-    image: "/assets/25.jpg",
+    image: "/assets/81.jpg",
     href: "/wine-tasting",
   },
   {

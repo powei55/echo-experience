@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://echo-experience.vercel.app"), 
   title: "Echo Experience",
   description: "Experience elegance and comfort.",
   openGraph: {
