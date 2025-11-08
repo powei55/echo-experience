@@ -12,7 +12,7 @@ const PrivateShopping = () => {
       {/* Hero Section */}
       <section className="relative h-screen w-full">
         <Image
-          src="/assets/76.jpg"
+          src="/assets/73.jpg"
           alt="Private Shopping in Paris"
           fill
           className="object-cover object-center"
