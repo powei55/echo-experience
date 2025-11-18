@@ -33,7 +33,7 @@ const conciergeServices = [
     title: "Private Chauffeur Services",
     description:
       "Your driver, your schedule. Elegant chauffeured transport for shopping, events, or simply exploring Paris effortlessly.",
-    image: "/assets/42.jpg",
+    image: "/assets/111.jpg",
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const LifestyleConciergePage = () => {
   return (
     <main className="bg-[#f9f7f5]/90 text-[#1c3934] min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/assets/32.jpg')] bg-cover bg-center">
+      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/assets/106.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-[#1c3934]/70"></div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

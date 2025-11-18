@@ -1,19 +1,53 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaChevronDown } from "react-icons/fa";
+
+const experienceItems = [
+  { label: "Museum Visit", href: "/museums" },
+  { label: "Wine Tasting", href: "/wine-tasting" },
+  { label: "Private Shopping", href: "/private-shopping" },
+  { label: "Paris Highlight", href: "/paris-experience" },
+];
+
+const serviceItems = [
+  { label: "Event Consultation", href: "/event-consultation" },
+  { label: "Lifestyle Concierge", href: "/lifestyle-concierge" },
+  { label: "Shopping", href: "/shopping" },
+  { label: "Wine and Taste", href: "/wine-and-taste" },
+  { label: "Arrival and Departure", href: "/arrival-departure" },
+  { label: "Echo Atelier", href: "/echo-atelier" },
+];
 
 const DesktopNavbar = () => {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
+
+  const toggleDropdown = (name: string) =>
+    setOpenDropdown(openDropdown === name ? null : name);
 
   return (
     <nav
@@ -24,7 +58,7 @@ const DesktopNavbar = () => {
       }`}
     >
       <div className="w-full flex items-center justify-between h-full">
-        {/* Left - Animated Logo */}
+        {/* Logo */}
         <Link href="/" className="flex items-center h-full relative">
           <div
             className={`transition-all duration-700 ease-in-out transform ${
@@ -44,29 +78,74 @@ const DesktopNavbar = () => {
           </div>
         </Link>
 
-        {/* Right - Navigation Links */}
-        <div className="flex items-center gap-12 h-full">
-          {[
-            { label: "Experience", id: "experience", href: "/#experience" },
-            { label: "Services", id: "services", href: "/#services" },
-            { label: "About Us", id: "brand", href: "/about-us" },
-            { label: "Contact Us", href: "/contact-page" },
-          ].map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              onClick={() =>
-                item.id &&
-                document
-                  .getElementById(item.id)
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="relative uppercase tracking-[2px] text-[15px] font-medium hover:text-current transition-all duration-300 group flex items-center"
+        {/* Nav Links */}
+        <div className="flex items-center gap-12 h-full" ref={dropdownRef}>
+          {/* EXPERIENCE */}
+          <div className="relative">
+            <div
+              className="relative uppercase tracking-[2px] text-[11px] font-medium cursor-pointer flex items-center gap-1 group"
+              onClick={() => toggleDropdown("experience")}
             >
-              {item.label}
+              EXPERIENCE <FaChevronDown className="text-[10px]" />
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#e6c8b7] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
+            </div>
+            {openDropdown === "experience" && (
+              <div className="absolute top-full left-0 bg-white text-black shadow-md rounded-md mt-2 min-w-[180px] py-2 z-50">
+                {experienceItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setOpenDropdown(null)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* SERVICES */}
+          <div className="relative">
+            <div
+              className="relative uppercase tracking-[2px] text-[11px] font-medium cursor-pointer flex items-center gap-1 group"
+              onClick={() => toggleDropdown("services")}
+            >
+              SERVICES <FaChevronDown className="text-[10px]" />
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#e6c8b7] transition-all duration-300 group-hover:w-full"></span>
+            </div>
+            {openDropdown === "services" && (
+              <div className="absolute top-full left-0 bg-white text-black shadow-md rounded-md mt-2 min-w-[200px] py-2 z-50">
+              {serviceItems.map((item) => (
+              <Link
+                key={item.label}
+                href={`/services${item.href}`}  // ✅ makes it absolute under /services
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={() => setOpenDropdown(null)}
+              >
+                {item.label}
+              </Link>
+            ))}
+                          </div>
+            )}
+          </div>
+
+          {/* OTHER LINKS */}
+          <Link
+            href="/about-us"
+            className="relative uppercase tracking-[2px] text-[11px] font-medium hover:text-current transition-all duration-300 group"
+          >
+            About Us
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#e6c8b7] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+
+          <Link
+            href="/contact-page"
+            className="relative uppercase tracking-[2px] text-[11px] font-medium hover:text-current transition-all duration-300 group"
+          >
+            Contact Us
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#e6c8b7] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
         </div>
       </div>
     </nav>

@@ -39,7 +39,7 @@ const WineDetailsPage = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-[#f9f7f5] tracking-wider mb-4"
+            className="text-[25px] md:text-3xl font-bold text-[#f9f7f5] tracking-wider mb-4"
           >
             {wine.name}
           </motion.h1>
@@ -55,7 +55,7 @@ const WineDetailsPage = () => {
       </section>
 
       {/* Details Section */}
-      <section className="py-20 px-6 md:px-16 lg:px-32 flex flex-col md:flex-row items-center gap-12">
+      <section className="py-20 px-6 md:px-16 lg:px-32 flex flex-col md:flex-row gap-12">
         <div className="relative w-full md:w-1/2 h-[400px] rounded-2xl overflow-hidden shadow-lg">
           <Image
             src={wine.img}

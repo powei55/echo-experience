@@ -12,7 +12,7 @@ const HomePage = () => {
       <CollectionSection />
       <ServicesSection  />
       <TestimonialSection />
-      <BrandExperienceSection />
+      {/* <BrandExperienceSection /> */}
     </main>
   );
 };

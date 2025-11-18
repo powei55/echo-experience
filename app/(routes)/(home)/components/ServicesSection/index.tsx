@@ -17,7 +17,7 @@ const services = [
     title: "Lifestyle Concierge",
     description:
       "Your Parisian life, orchestrated with ease and elegance — from fine dining to last-minute luxury arrangements.",
-    image: "/assets/32.jpg",
+    image: "/assets/106.jpg",
     href: "/services/lifestyle-concierge",
   },
   {
@@ -33,7 +33,7 @@ const services = [
     title: "Wine, Taste & the French Table",
     description:
       "Private culinary and wine journeys celebrating the art of French gastronomy and refined taste.",
-    image: "/assets/24.jpg",
+    image: "/assets/105.jpg",
     href: "/services/wine-and-taste",
   },
   {
@@ -59,10 +59,10 @@ const ServicesSection = () => {
     <section id="services" className="w-full mx-auto py-20 px-6 bg-[#f9f7f5]">
       {/* Section Header */}
       <div className="max-w-3xl mx-auto mb-12 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+        <h2 className="text-[25px] md:text-3xl font-bold mb-4 text-gray-900">
           Our Services
         </h2>
-        <p className="text-gray-700 leading-relaxed italic">
+        <p className="text-base md:text-[19px] text-gray-700 leading-relaxed italic">
           Explore our portfolio of bespoke luxury services, crafted to offer
           refined experiences with Parisian sophistication.
         </p>

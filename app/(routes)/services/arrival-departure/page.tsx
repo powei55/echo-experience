@@ -12,7 +12,7 @@ id: 1,
 title: "VIP Airport Meet & Greet",
 description:
 "Step into comfort the moment you land. Our team greets you at the gate, assisting with immigration, customs, and transfers — ensuring a smooth, private, and luxurious welcome to France.",
-image: "/assets/39.jpg",
+image: "/assets/110.jpg",
 },
 {
 id: 2,

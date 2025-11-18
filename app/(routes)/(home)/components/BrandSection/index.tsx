@@ -58,7 +58,7 @@ const BrandExperienceSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 tracking-wide">
             About Our Experiences
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed italic">
+          <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed italic text-sm">
             We curate unforgettable Parisian experiences — from timeless art and fine wine
             to exclusive shopping and breathtaking highlights of the City of Light.
           </p>

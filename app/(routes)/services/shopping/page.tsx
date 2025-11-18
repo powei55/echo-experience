@@ -19,7 +19,7 @@ const coutureServices = [
     title: "La Samaritaine & Galeries Lafayette Suites",
     description:
       "Enjoy personalized shopping within the city’s iconic retail temples — with private suites, champagne service, and couture specialists dedicated to you.",
-    image: "/assets/45.jpg",
+    image: "/assets/136.jpg",
   },
   {
     id: 3,

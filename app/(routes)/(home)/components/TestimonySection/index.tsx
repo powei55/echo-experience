@@ -45,7 +45,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section id="testimony" className="bg-gradient-to-b from-[#f9f7f5] to-[#e6c8b7] py-20 overflow-hidden">
+    <section id="testimony" className="bg-white py-20 overflow-hidden">
       <div className="max-w-4xl mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -54,10 +54,10 @@ const TestimonialSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[25px] md:text-3xl font-bold text-[#1c3934] mb-4">
             What Our Guests Say
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mx-auto font-light leading-relaxed text-base md:text-[19px]">
             Discover how travelers from around the world experienced Paris through our eyes —
             where luxury meets authenticity.
           </p>
@@ -71,13 +71,14 @@ const TestimonialSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.1 }}
+              // bg-[-[#f9f7f5]
             >
-              <div className="relative bg-white/70 backdrop-blur-md shadow-lg rounded-2xl p-10 text-center mx-6 overflow-visible">
+              <div className="relative  bg-[#f9f7f5]  backdrop-blur-md shadow-lg rounded-2xl p-10 text-center mx-6 overflow-visible">
                 <div className="mb-4">
                   <p className="text-gray-700 italic mb-6 leading-relaxed text-base md:text-lg">
                     “{t.text}”
                   </p>
-                  <h4 className="text-lg font-semibold text-gray-800">{t.name}</h4>
+                  <h4 className="text-lg font-semibold text-[#1c3934]">{t.name}</h4>
                   <span className="text-sm text-gray-500">{t.role}</span>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const experiences = [
     title: "Museum Visits",
     description:
       "Immerse yourself in the world of art, history, and culture at Paris’s most iconic museums.",
-    image: "/assets/12.jpg",
+    image: "/assets/95.jpg",
     href: "/museums",
   },
   {
@@ -17,7 +17,7 @@ const experiences = [
     title: "Wine Tasting",
     description:
       "Savor the finest French wines and learn the secrets of winemaking with expert sommeliers.",
-    image: "/assets/81.jpg",
+    image: "/assets/102.jpg",
     href: "/wine-tasting",
   },
   {
@@ -25,7 +25,7 @@ const experiences = [
     title: "Private Shopping",
     description:
       "Enjoy exclusive access to Paris’s most luxurious boutiques and shopping districts.",
-    image: "/assets/13.jpg",
+    image: "/assets/101.jpg",
     href: "/private-shopping",
   },
   {
@@ -46,10 +46,10 @@ const CollectionSection = () => {
     >
       {/* Section Header */}
       <div className="max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+        <h2 className="text-[25px] md:text-3xl font-bold mb-4 text-gray-900">
           Our Collection of Experiences
         </h2>
-        <p className="text-gray-600 leading-relaxed italic">
+        <p className="text-base md:text-[19px] text-gray-600 leading-relaxed italic">
           Explore handpicked Parisian experiences designed to connect you with
           art, taste, culture, and timeless elegance.
         </p>

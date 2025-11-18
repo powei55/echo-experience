@@ -4,6 +4,7 @@ export const museums = [
     name: "Louvre Museum",
     price: "€120",
     img: "/assets/66.jpg",
+    extraImages: ["/assets/63.jpg", "/assets/63.jpg", "/assets/63.jpg"],
     description:
       "Explore the world’s largest art museum, home to the Mona Lisa and countless masterpieces from antiquity to the Renaissance.",
   },
@@ -11,7 +12,8 @@ export const museums = [
     id: 2,
     name: "Orsay Museum",
     price: "€100",
-    img: "/assets/56.jpg",
+    img: "/assets/116.jpg",
+    extraImages: ["/assets/117.jpg", "/assets/118.jpg", "/assets/119.jpg"],
     description:
       "Admire stunning Impressionist art by Monet, Van Gogh, and Degas in this converted Beaux-Arts railway station.",
     details: {
@@ -39,7 +41,8 @@ export const museums = [
     id: 3,
     name: "Opera Garnier",
     price: "€90",
-    img: "/assets/67.jpg",
+    img: "/assets/124.jpg",
+    extraImages: ["/assets/87.jpg", "/assets/125.jpg", "/assets/126.jpg"],
     description:
       "Step into opulence and history at Paris’s grand opera house — an architectural masterpiece of the 19th century.",
     details: {
@@ -69,7 +72,8 @@ export const museums = [
     id: 4,
     name: "Carnavalet Museum",
     price: "€80",
-    img: "/assets/63.jpg",
+    img: "/assets/131.jpg",
+    extraImages: ["/assets/133.jpg", "/assets/132.jpg", "/assets/134.jpg"],
     description:
       "Journey through the history of Paris from its origins to the present in this charming and beautifully restored mansion.",
     details: {
@@ -97,7 +101,8 @@ export const museums = [
     id: 5,
     name: "Versailles Palace",
     price: "€150",
-    img: "/assets/69.jpg",
+    img: "/assets/112.jpg",
+    extraImages: ["/assets/113.jpg", "/assets/115.jpg", "/assets/91.jpg"],
     description:
       "Walk in the footsteps of French royalty in the Hall of Mirrors and gardens of this UNESCO World Heritage site.",
     details: {
@@ -126,21 +131,58 @@ export const museums = [
 ];
 
 export const ParisExperienceSections = [
+   {
+  id: 1,
+  name: "Private Visit of Montmartre with Wine Tasting",
+  price: "€576",
+  img: "/assets/127.jpg",
+  extraImages: ["/assets/128.jpg", "/assets/103.jpg", "/assets/129.jpg"],
+  description:
+    "Discover the soul of Montmartre — its art, vineyards, and charm — on a private guided walk ending with a refined wine tasting that celebrates Paris’ poetic hilltop village.",
+  details: {
+    title: "Private Visit of Montmartre with Wine Tasting",
+    intro:
+      "Art, heritage, and the quiet poetry of wine. Step into the storybook streets of Montmartre — Paris’ hilltop village where art, history, and soul intertwine. This private walking journey reveals the neighbourhood’s bohemian charm and vineyard legacy, culminating in a curated wine tasting that celebrates the hill’s enduring spirit of indulgence and artistry.",
+    fullDescription: [
+      "Overview — Duration: 3 hours. Meeting Point: Agreed meeting point or hotel pick-up (upon request). Availability: Year-round (ideal from spring to autumn). Cost: €576.",
+      "1. Welcome & Ascent — Your experience begins at Église Saint-Jean de Montmartre, an Art Nouveau cathedral. As you ascend the hill, your guide brings to life the tales of artists and dreamers who made Montmartre their muse — from Picasso and Modigliani to Renoir.",
+      "2. Artistic Landmarks — Explore Le Bateau-Lavoir, Le Passe-Muraille, and Dalida Square, each revealing a unique layer of the hill’s creative past and its influence on generations of artists.",
+      "3. Clos Montmartre Vineyard — Pause at Clos Montmartre, the city’s last active vineyard, hidden behind cobblestone lanes and ivy-draped walls. Learn about its centuries-old winemaking tradition and the limited cuvée that embodies Montmartre’s independent spirit.",
+      "4. Rue de l’Abreuvoir & Place du Tertre — Wander along Rue de l’Abreuvoir, one of Paris’s most photographed streets, to reach Place du Tertre, where artists still paint en plein air. The square’s timeless atmosphere captures the essence of Montmartre’s living creativity.",
+      "5. Sacré-Cœur & The Finale — Arrive at the summit to enjoy panoramic views over Paris. Conclude with a private cheese and wine tasting led by our sommelier — four elegant French wines paired with light gourmet bites and insights connecting terroir to tale, art to earth. Optional upgrades available for personalized wine selections and pairings."
+    ],
+    highlights: [
+      "• Private, expert guide fluent in art history and local heritage",
+      "• Sommelier-led tasting of 4 curated wines with refined pairings",
+      "• Visit to Montmartre’s last vineyard, Clos Montmartre",
+      "• Scenic walk through Rue de l’Abreuvoir and Place du Tertre",
+      "• Optional chauffeur service for hotel pick-up and drop-off"
+    ],
+    duration: "3 hours",
+    groupSize: "Private — up to 6 guests (custom groups available on request)",
+    cost: "€576 (base price)",
+    meetingPoint: "Agreed meeting point or hotel pick-up (upon request)",
+    availability: "Year-round (best from spring to autumn)",
+    inclusions: [
+      "Private, expert guide",
+      "Sommelier-led wine tasting of 4 wines with light gourmet bites",
+      "Guided walking tour through Montmartre’s artistic landmarks",
+      "Complimentary bottled water"
+    ],
+    optionalAddOns: [
+      "Private chauffeur service (roundtrip)",
+      "Upgraded wine selection & gourmet pairings",
+      "Extended full-day itinerary with Louvre & Seine cruise"
+    ]
+  }
+},
   {
-    id: 1,
+    id: 2,
     name: "Lunch/Dinner Seine River Boat Cruise",
     price: "€120",
     img: "/assets/57.jpg",
     description:
       "Glide along the Seine River and enjoy a delicious lunch or dinner as the city of Paris sparkles around you. This relaxing cruise combines great food, live music, and unforgettable views of the Eiffel Tower and other landmarks.",
-  },
-  {
-    id: 2,
-    name: "Vintage Car Parisian Tour",
-    price: "€100",
-    img: "/assets/18.jpg",
-    description:
-      "Step back in time and explore Paris in a classic vintage car. Feel the charm of the city streets as you pass iconic spots like the Champs-Élysées, Montmartre, and the Arc de Triomphe — all while your friendly driver shares hidden stories of the city.",
   },
   {
     id: 3,
@@ -150,14 +192,7 @@ export const ParisExperienceSections = [
     description:
       "Spend a full day discovering the magic of Paris — from the bohemian charm of Montmartre to the beauty of Nôtre Dame and the art-filled halls of the Louvre. End your day with a relaxing Seine River cruise as the city lights come alive.",
   },
-  {
-    id: 4,
-    name: "Paris Île de la Cité Experience: Notre Dame, St. Chapelle, La Conciergerie, Pont Neuf",
-    price: "€80",
-    img: "/assets/78.jpg",
-    description:
-      "Explore the heart of historic Paris on Île de la Cité. Visit the majestic Notre Dame, the stained-glass wonder of Sainte-Chapelle, and the royal halls of La Conciergerie. Stroll across the famous Pont Neuf and feel the city’s timeless spirit all around you.",
-  },
+
 ];
 
 export const shoppings = [
@@ -165,7 +200,7 @@ export const shoppings = [
     id: 1,
     name: "Shopping at the Historic La Samaritaine",
     price: "€120",
-    img: "/assets/45.jpg",
+    img: "/assets/135.jpg",
     description:
       "Step inside one of Paris’s most iconic department stores, blending timeless architecture with the latest in luxury shopping and dining.",
     href: "/shopping/la-samaritaine",
@@ -204,7 +239,7 @@ export const wines = [
     id: 1,
     name: "Private Parisian Wine Tasting with a Sommelier",
     price: "€120",
-    img: "/assets/21.jpg",
+    img: "/assets/104.jpg",
     description:
       "Enjoy an intimate wine-tasting session led by an expert sommelier, where every sip tells a story of France’s finest vineyards.",
   },

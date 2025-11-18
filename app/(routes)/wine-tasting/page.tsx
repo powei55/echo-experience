@@ -12,8 +12,8 @@ const WineTastingSection = () => {
       {/* Hero Section */}
       <section className="relative h-screen w-full">
         <Image
-          src="/assets/81.jpg"
-          alt="Museum Visits"
+          src="/assets/102.jpg"
+          alt="Wine Tasting"
           fill
           className="object-cover object-center"
           priority

@@ -54,7 +54,7 @@ const ShoppingDetailsPage = () => {
       </section>
 
       {/* Details Section */}
-      <section className="py-20 px-6 md:px-16 lg:px-32 flex flex-col md:flex-row items-center gap-12">
+      <section className="py-20 px-6 md:px-16 lg:px-32 flex flex-col md:flex-row  gap-12">
         <div className="relative w-full md:w-1/2 h-[400px] rounded-2xl overflow-hidden shadow-lg">
           <Image
             src={shopping.img}

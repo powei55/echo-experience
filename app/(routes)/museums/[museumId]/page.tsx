@@ -29,7 +29,7 @@ const MuseumDetailsPage = () => {
     return (
       <main className="w-full bg-[#f9f7f5] text-[#1c3934]">
         {/* Hero Section */}
-        <section className="relative h-[80vh] w-full">
+        <section className="relative h-[60vh] w-full">
           <Image
             src={museum.img}
             alt={museum.name}
@@ -41,7 +41,7 @@ const MuseumDetailsPage = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-[#f9f7f5] tracking-wider mb-4"
+              className="text-[25px] md:text-3xl font-bold text-[#f9f7f5] tracking-wider mb-4"
             >
               The Louvre Experiences
             </motion.h1>
@@ -63,15 +63,47 @@ const MuseumDetailsPage = () => {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="flex flex-col md:flex-row items-center gap-12"
+            className="flex flex-col md:flex-row gap-12"
           >
-            <div className="relative w-full md:w-1/2 h-[420px] rounded-3xl overflow-hidden shadow-lg">
-              <Image
-                src="/assets/61.jpg"
-                alt="Private Visit of the Louvre"
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              /> 
+            <div className="w-full md:w-1/2 flex flex-col gap-4">
+              <div className="relative w-full h-[320px] md:h-auto md:flex-1 rounded-3xl overflow-hidden shadow-lg">
+                <Image
+                  src="/assets/82.jpg"
+                  alt="The Louvre After Hours"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+                {/* Extra Images */}
+            <div className="hidden md:grid md:grid-cols-3 gap-3 mt-4">
+ 
+              <div className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/assets/64.jpg"
+                  alt="Gallery image 2"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/assets/61.jpg"
+                  alt="Gallery image 3"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/assets/95.jpg"
+                  alt="Gallery image 4"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
             </div>
 
             <div className="flex-1">
@@ -117,7 +149,7 @@ const MuseumDetailsPage = () => {
                 onClick={() => setShowModal(true)}
                 className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
               >
-                Book this experience
+                Request this experience
               </button>
 
               {/* Reservation Modal */}
@@ -135,15 +167,47 @@ const MuseumDetailsPage = () => {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="flex flex-col md:flex-row-reverse items-center gap-12"
+            className="flex flex-col md:flex-row-reverse gap-12 "
           >
-            <div className="relative w-full md:w-1/2 h-[420px] rounded-3xl overflow-hidden shadow-lg">
-              <Image
-                src="/assets/65.jpg"
-                alt="The Louvre After Hours"
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
+            <div className="w-full md:w-1/2 flex flex-col gap-4">
+              <div className="relative w-full h-[320px] md:h-auto md:flex-1 rounded-3xl overflow-hidden shadow-lg">
+                <Image
+                  src="/assets/121.jpg"
+                  alt="The Louvre After Hours"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+                {/* Extra Images */}
+            <div className="hidden md:grid md:grid-cols-3 gap-3 mt-4">
+ 
+              <div className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/assets/120.jpg"
+                  alt="Gallery image 2"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/assets/123.jpg"
+                  alt="Gallery image 3"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/assets/122.jpg"
+                  alt="Gallery image 4"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
             </div>
 
             <div className="flex-1">
@@ -189,7 +253,7 @@ const MuseumDetailsPage = () => {
                 onClick={() => setShowModal(true)}
                 className=" text-white px-6 py-3 rounded-xl  transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
               >
-                Book this experience
+                Request this experience
               </button>
 
               {/* Reservation Modal */}
@@ -249,65 +313,89 @@ const MuseumDetailsPage = () => {
       </section>
 
       {/* Details Section */}
-      <section className="py-24 px-6 md:px-16 lg:px-32 space-y-24">
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="flex flex-col md:flex-row items-center gap-12"
+   <section className="py-24 px-6 md:px-16 lg:px-32 space-y-24">
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+      className="flex flex-col md:flex-row gap-12 md:items-stretch"
+    >
+    {/* Left - Images */}
+  <div className="w-full md:w-1/2 flex flex-col gap-4">
+     {/* Main Image */}
+    <div className="relative w-full h-[320px] md:h-auto md:flex-1 rounded-3xl overflow-hidden shadow-lg">
+      <Image
+        src={museum?.img || ""}
+        alt={museum?.name || ""}
+        fill
+        priority
+        className="object-cover"
+      />
+    </div>
+
+  {/* Extra Images */}
+  {museum.extraImages && (
+    <div className="hidden md:grid md:grid-cols-3 gap-3 mt-4">
+      {museum.extraImages.map((src, i) => (
+        <div
+          key={i}
+          className="relative h-[150px] md:h-[180px] rounded-2xl overflow-hidden shadow-md"
         >
-          <div className="relative w-full md:w-1/2 h-[420px] rounded-3xl overflow-hidden shadow-lg">
-            <Image
-              src={museum?.img || ""}
-              alt={museum?.name || ""}
-              fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
+          <Image
+            src={src}
+            alt={`${museum.name} image ${i + 1}`}
+            fill
+            className="object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  )}
+  </div>
 
-          <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#1c3934]">
-              {details?.title}
-            </h2>
+    {/* Right - Description */}
+    <div className="flex-1">
+      <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#1c3934]">
+        {details?.title}
+      </h2>
 
-            {details?.fullDescription?.map((paragraph, index) => (
-              <p key={index} className="text-gray-700 leading-relaxed mb-6 italic">
-                {paragraph}
-              </p>
-            ))}
+      {details?.fullDescription?.map((paragraph, index) => (
+        <p key={index} className="text-gray-700 leading-relaxed mb-6 italic">
+          {paragraph}
+        </p>
+      ))}
 
-            <ul className="space-y-2 text-gray-800 mb-6 italic">
-              {details?.highlights?.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+      <ul className="space-y-2 text-gray-800 mb-6 italic">
+        {details?.highlights?.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
 
-            <p className="text-sm text-gray-600 mb-2 italic">
-              <strong>Duration:</strong> {details?.duration}
-            </p>
-            <p className="text-sm text-gray-600 mb-2 italic">
-              <strong>Cost:</strong> {details?.cost}
-            </p>
+      <p className="text-sm text-gray-600 mb-2 italic">
+        <strong>Duration:</strong> {details?.duration}
+      </p>
+      <p className="text-sm text-gray-600 mb-2 italic">
+        <strong>Cost:</strong> {details?.cost}
+      </p>
 
-             <>
-              {/* CTA Button */}
-              <button
-                onClick={() => setShowModal(true)}
-                className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
-              >
-                Book this experience
-              </button>
+      <>
+        <button
+          onClick={() => setShowModal(true)}
+          className="text-white px-6 py-3 rounded-xl transition bg-[#1c3934] font-semibold hover:bg-[#294f49] cursor-pointer"
+        >
+          Request this experience
+        </button>
 
-              {/* Reservation Modal */}
-              <ReservationModal
-                isOpen={showModal}
-                onClose={() => setShowModal(false)}
-                experienceName={museum.name}
-              />
-            </>
-          </div>
-        </motion.div>
-      </section>
+        <ReservationModal
+          isOpen={showModal}
+          onClose={() => setShowModal(false)}
+          experienceName={museum.name}
+        />
+      </>
+    </div>
+  </motion.div>
+   </section>
+
 
       <div className="text-center pb-16">
         <Link

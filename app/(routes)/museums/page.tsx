@@ -77,13 +77,13 @@ const MuseumVisitsPage = () => {
                   transition={{ duration: 0.4 }}
                   className="p-6 text-center"
                 >
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-700 text-[12px] mb-4 line-clamp-3">
                     {museum.description}
                   </p>
                   {/* <p className="text-[#1c3934]/80 font-semibold mb-3">
                     From {museum.price}
                   </p> */}
-                  <button className="px-5 py-2 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
+                  <button className="px-5 py-2 bg-[#1c3934] text-[13px] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
                     View Details
                   </button>
                 </motion.div>

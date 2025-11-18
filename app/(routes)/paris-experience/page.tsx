@@ -45,7 +45,7 @@ const ParisExperienceSection = () => {
 
       {/* Experiences Grid Section */}
       <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
           {ParisExperienceSections.map((experience, index) => (
             <motion.div
               key={experience.id}
@@ -75,7 +75,7 @@ const ParisExperienceSection = () => {
                   </motion.div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c3934]/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-[#f9f7f5]">
-                    <h3 className="text-xl font-semibold leading-snug">
+                    <h3 className="text-sm font-semibold leading-snug">
                       {experience.name}
                     </h3>
                   </div>
@@ -87,14 +87,14 @@ const ParisExperienceSection = () => {
                   transition={{ duration: 0.4 }}
                   className="p-6 text-center"
                 >
-                  <p className="text-[#1c3934]/70 mb-4 text-sm md:text-base leading-relaxed italic">
+                  <p className="text-[#1c3934]/70 mb-4 text-[12px] md:text-base leading-relaxed">
                     {experience.description}
                   </p>
                   {/* <p className="text-[#1c3934]/90 font-semibold mb-3">
                     From {experience.price}
                   </p> */}
-                  <span className="inline-block px-5 py-2 bg-[#1c3934] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
-                    Veiw Details
+                  <span className="inline-block px-5 py-2 bg-[#1c3934] text-[13px] text-[#f9f7f5] rounded-full hover:bg-[#294f49] transition">
+                    View Details
                   </span>
                 </motion.div>
               </Link>
