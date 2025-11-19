@@ -8,7 +8,7 @@ import { FaPause, FaPlay } from "react-icons/fa";
 const slides = [
   {
     id: 1,
-    image: "/assets/107.jpg",
+    image: "/assets/137.jpg",
     title: "UNCOVER THE MAGIC IN EVERY MOMENT",
     description:
       "",
