@@ -97,7 +97,7 @@ const WineDetailsPage = () => {
       {/* Back Link */}
       <div className="text-center pb-16">
         <Link
-          href="/private-shopping"
+          href="/wine-tasting"
           className="text-[#1c3934] underline hover:text-[#294f49]"
         >
           ← Back to All Experiences
