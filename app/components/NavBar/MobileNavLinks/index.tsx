@@ -40,7 +40,7 @@ const MobileNavLinks: React.FC<Props> = ({ isOpen, onClose }) => {
               onClick={() => toggleMenu("experience")}
               className="flex items-center gap-1 uppercase tracking-widest text-[11px] hover:text-gray-400"
             >
-              EXPERIENCE
+              EXPERIENCES
               < FaChevronDown 
                 className={`w-4 h-4 transition-transform duration-300 ${
                   openMenu === "experience" ? "rotate-180" : ""

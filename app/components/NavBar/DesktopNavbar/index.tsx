@@ -13,11 +13,11 @@ const experienceItems = [
 ];
 
 const serviceItems = [
+   { label: "Concierge Services", href: "/lifestyle-concierge" },
   { label: "Event Consultation", href: "/event-consultation" },
-  { label: "Lifestyle Concierge", href: "/lifestyle-concierge" },
-  { label: "Shopping", href: "/shopping" },
-  { label: "Wine and Taste", href: "/wine-and-taste" },
-  { label: "Arrival and Departure", href: "/arrival-departure" },
+  { label: "Private Shopping Couture Access", href: "/shopping" },
+  // { label: "Wine and Taste", href: "/wine-and-taste" },
+  // { label: "Arrival and Departure", href: "/arrival-departure" },
   { label: "Echo Atelier", href: "/echo-atelier" },
 ];
 
@@ -86,7 +86,7 @@ const DesktopNavbar = () => {
               className="relative uppercase tracking-[2px] text-[11px] font-medium cursor-pointer flex items-center gap-1 group"
               onClick={() => toggleDropdown("experience")}
             >
-              EXPERIENCE <FaChevronDown className="text-[10px]" />
+              EXPERIENCES <FaChevronDown className="text-[10px]" />
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#e6c8b7] transition-all duration-300 group-hover:w-full"></span>
             </div>
             {openDropdown === "experience" && (
@@ -95,7 +95,7 @@ const DesktopNavbar = () => {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 text-[11px]"
                     onClick={() => setOpenDropdown(null)}
                   >
                     {item.label}
@@ -120,7 +120,7 @@ const DesktopNavbar = () => {
               <Link
                 key={item.label}
                 href={`/services${item.href}`}  // ✅ makes it absolute under /services
-                className="block px-4 py-2 hover:bg-gray-100"
+                className="block px-4 py-2 hover:bg-gray-100 text-[11px]"
                 onClick={() => setOpenDropdown(null)}
               >
                 {item.label}

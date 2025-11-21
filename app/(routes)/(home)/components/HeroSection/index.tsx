@@ -11,8 +11,8 @@ const slides = [
     image: "/assets/137.jpg",
     title: "UNCOVER THE MAGIC IN EVERY MOMENT",
     description:
-      "",
-    museums: ["Refined", "Cultural", "Experimental"],
+      " Transforming travel into timeless memories.",
+    museums: [""],
     link: "/museums",
   },
   {
@@ -20,7 +20,7 @@ const slides = [
   image: "/assets/108.jpg",
   title: "LOUVRE AFTER-HOURS PRIVATE ACCESS",
   description:
-    "An exclusive 3-hour after-hours experience inside the Louvre, guided by a senior curator with personalized concierge service. Begin with champagne by the pyramid before exploring the museum in complete serenity, with an optional private dinner prepared by a dedicated chef.",
+    "When the crowds have gone and the lights dim, the Louvre becomes something  extraordinary, still, echoing and utterly yours.",
   museums: [
     "Senior Curator-Led Louvre Tour",
     "Optional Private Dinner Experience"
@@ -33,23 +33,11 @@ const slides = [
     "Optional intimate post-tour dinner with a private chef",
     "A rare moment of silence and intimacy with the world’s greatest masterpieces"
   ],
-  link: "/museums/1"
+  link: "/museums/louvre/after-hours"
 },
-  // {
-  //   id: 3,
-  //   image: "/assets/103.jpg",
-  //   title: "WINE TASTING",
-  //   description:
-  //     "",
-  //   museums: [
-  //     "Full-day Champagne Visit",
-  //     "Private Parisian Wine tasting with a Sommelier",
-  //   ],
-  //   link: "/wine-tasting",
-  // },
   {
     id: 4,
-    image: "/assets/101.jpg",
+    image: "/assets/99.jpg",
     title: "PRIVATE SHOPPING",
     description:
       "",
@@ -59,21 +47,9 @@ const slides = [
     ],
     link: "/private-shopping",
   },
-  // {
-  //   id: 5,
-  //   image: "/assets/76.jpg",
-  //   title: "PARIS HIGHLIGHT EXPERIENCES",
-  //   description:
-  //     "",
-  //   museums: [
-  //     "Lunch/Dinner Seine River Boat Cruise",
-  //     "Vintage Car Parisian Tour",
-  //   ],
-  //   link: "/paris-experience",
-  // },
   {
   id: 6,
-  image: "/assets/109.jpg",
+  image: "/assets/140.jpeg",
   title: "MONTMARTRE PRIVATE WALK & WINE EXPERIENCE",
   description:
     "A 3-hour private walking tour of Montmartre that traces the hill’s artistic past, visits the last active vineyard in Paris, and finishes with a sommelier-led cheese & wine tasting at the Sacré-Cœur summit.",
@@ -190,8 +166,6 @@ const HomePage = () => {
           </div>
         ))}
       </Slider>
-
-      {/* Play/Pause button — bottom center */}
     
     </main>
   );

@@ -26,7 +26,7 @@ const conciergeServices = [
     title: "Airport Pickup & Drop-off",
     description:
       "Arrive and depart in comfort and style with punctual airport transfers and seamless travel coordination.",
-    image: "/assets/34.jpg",
+    image: "/assets/110.jpg",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const conciergeServices = [
     title: "Personal Errand Coordination",
     description:
       "Delegate the details — from gift deliveries to personal shopping — so you can focus on living beautifully.",
-    image: "/assets/43.jpg",
+    image: "/assets/106.jpg",
   },
 ];
 

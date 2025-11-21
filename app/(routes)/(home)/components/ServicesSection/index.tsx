@@ -4,21 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  {
+   {
     id: 1,
+    title: "Concierge Services",
+    description:
+      "Your Parisian life, orchestrated with ease and elegance — from fine dining to last-minute luxury arrangements.",
+    image: "/assets/138.jpg",
+    href: "/services/lifestyle-concierge",
+  },
+  {
+    id: 2,
     title: "Event Consultation",
     description:
       "Designing and executing unforgettable destination events in France’s most exclusive estates, vineyards, and châteaux.",
     image: "/assets/31.jpg",
     href: "/services/event-consultation",
-  },
-  {
-    id: 2,
-    title: "Lifestyle Concierge",
-    description:
-      "Your Parisian life, orchestrated with ease and elegance — from fine dining to last-minute luxury arrangements.",
-    image: "/assets/106.jpg",
-    href: "/services/lifestyle-concierge",
   },
   {
     id: 3,
@@ -28,22 +28,22 @@ const services = [
     image: "/assets/73.jpg",
     href: "/services/shopping",
   },
-  {
-    id: 4,
-    title: "Wine, Taste & the French Table",
-    description:
-      "Private culinary and wine journeys celebrating the art of French gastronomy and refined taste.",
-    image: "/assets/105.jpg",
-    href: "/services/wine-and-taste",
-  },
-  {
-    id: 5,
-    title: "Arrival & Departure Services",
-    description:
-      "Seamless luxury travel coordination from airport VIP assistance to private chauffeur transfers.",
-    image: "/assets/39.jpg",
-    href: "/services/arrival-departure",
-  },
+  // {
+  //   id: 4,
+  //   title: "Wine, Taste & the French Table",
+  //   description:
+  //     "Private culinary and wine journeys celebrating the art of French gastronomy and refined taste.",
+  //   image: "/assets/105.jpg",
+  //   href: "/services/wine-and-taste",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Arrival & Departure Services",
+  //   description:
+  //     "Seamless luxury travel coordination from airport VIP assistance to private chauffeur transfers.",
+  //   image: "/assets/39.jpg",
+  //   href: "/services/arrival-departure",
+  // },
   {
     id: 6,
     title: "The Echo Atelier",
@@ -69,7 +69,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {services.map((service) => (
           <Link
             href={service.href}

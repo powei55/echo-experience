@@ -51,7 +51,7 @@ const EchoAtelierPage = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-12 tracking-wide text-center md:text-left"
           >
-            The Echo Atelier (Consulting for Brands & Collaborations) Includes
+            The Echo Atelier ( For Brand Collaboration)
           </motion.h2>
 
           {/* Cards */}

@@ -44,7 +44,12 @@ const MuseumVisitsPage = () => {
       <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-[#f9f7f5] to-[#c6c8b7]/30">
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-10">
           {museums.map((museum, index) => (
-            <Link href={`/museums/${museum.id}`} key={museum.id}>
+            <Link href={
+                museum.specialRoutes
+                  ? museum.specialRoutes[0] 
+                  : `/museums/${museum.id}`  
+              }
+              key={museum.id}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -91,6 +96,11 @@ const MuseumVisitsPage = () => {
             </Link>
           ))}
         </div>
+           <div className="text-center py-16 ">
+                 <Link href="/" className="text-[#1c3934] underline hover:text-[#294f49]">
+                   ←  Back to Home
+                 </Link>
+               </div>
       </section>
     </main>
   );

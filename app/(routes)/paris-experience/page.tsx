@@ -102,6 +102,11 @@ const ParisExperienceSection = () => {
           ))}
         </div>
       </section>
+       <div className="text-center py-16 ">
+                 <Link href="/" className="text-[#1c3934] underline hover:text-[#294f49]">
+                   ←  Back to Home
+                 </Link>
+               </div>
     </main>
   );
 };

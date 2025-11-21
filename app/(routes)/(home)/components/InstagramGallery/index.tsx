@@ -5,61 +5,72 @@ import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 
 const instagramPosts = [
-  { id: 1, src: "/assets/22.jpg", link: "https://www.instagram.com/p/DPTKxEXiHdm/?utm_source=ig_web_copy_link", label: "Luxury Dining" },
-  { id: 2, src: "/assets/8.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Private Tours" },
-  { id: 3, src: "/assets/24.jpg", link: "https://www.instagram.com/p/DOLEgR2CBvV/?utm_source=ig_web_copy_link", label: "Fine Wine Tasting" },
-  { id: 4, src: "/assets/9.jpg", link: "https://www.instagram.com/p/DPTKxEXiHdm/?utm_source=ig_web_copy_link", label: "Cultural Moments" },
-  { id: 5, src: "/assets/3.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Paris Nights" },
-  { id: 6, src: "/assets/12.jpg", link: "https://www.instagram.com/reel/DNit92douPk/?utm_source=ig_web_copy_link", label: "Fashion & Lifestyle" },
+  { id: 1, src: "/assets/127.jpg", link: "#", label: "Luxury Dining" },
+  { id: 2, src: "/assets/132.jpg", link: "#", label: "Private Tours" },
+  { id: 3, src: "/assets/brand.png", link: "#", label: "Fine Wine Tasting" },
+  { id: 4, src: "/assets/118.jpg", link: "#", label: "Cultural Moments" },
+  { id: 5, src: "/assets/123.jpg", link: "#", label: "Paris Nights" },
 ];
 
 const InstagramGallery = () => {
   return (
-    <section id="" className="bg-[#f9f7f5] py-16 w-full">
-      <div className="text-center mb-10 px-4">
-        {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-          Follow Our Journey
-        </h2> */}
-        {/* <p className="text-gray-600 text-lg">
-          Explore moments from our curated experiences on{" "}
-          <span className="text-[#d47b4a] font-semibold">Instagram</span>.
-        </p> */}
-      </div>
+    <>
+      {/* Desktop Layout */}
+      <section className="hidden bg-[#f9f7f5] py-16 w-full xl:flex justify-center">
+        <div
+          className="grid grid-cols-5 w-full gap-4 justify-center items-end px-6"
+        >
+          {instagramPosts.map((post) => {
+            // HEIGHT RULES
+            let heightClass = "h-[180px]"; // default small
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="flex flex-wrap justify-center gap-6 px-6"
-      >
-        {instagramPosts.map((post) => (
-          <motion.a
-            key={post.id}
-            href={post.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            className="relative group overflow-hidden rounded-2xl w-[80%] md:w-[250px] h-[320px] shadow-md"
-          >
-            <Image
-              src={post.src}
-              alt={post.label}
-              width={250}
-              height={320}
-              className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4">
-              <p className="text-white text-sm font-medium mb-2">{post.label}</p>
-              <div className="flex items-center gap-2 text-white">
-                <FaInstagram />
-                <span className="text-sm font-semibold">View on Instagram</span>
+            if (post.id === 3) {
+              heightClass = "h-[260px]"; // tallest (center)
+            } else if (post.id === 2 || post.id === 4) {
+              heightClass = "h-[220px]"; // medium
+            } else if (post.id === 1 || post.id === 5) {
+              heightClass = "h-[180px]"; // smallest
+            }
+
+            return (
+              <div
+                key={post.id}
+                className={`relative group overflow-hidden rounded-xl ${heightClass} shadow-md`}
+              >
+                <Image
+                  src={post.src}
+                  alt={post.label}
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </div>
-          </motion.a>
-        ))}
-      </motion.div>
-    </section>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Mobile Layout */}
+   <section className="bg-[#f9f7f5] py-12 w-full xl:hidden">
+  <div
+    className="flex flex-row items-end gap-3 px-4 overflow-x-auto scrollbar-none">
+    {instagramPosts.map((post) => (
+      <div
+        key={post.id}
+        className="
+          relative flex-shrink-0 overflow-hidden rounded-xl shadow-md w-[100px] h-[150px] sm:w-[140px] sm:h-[170px] md:w-[200px] md:h-[190px]"
+      >
+        <Image
+          src={post.src}
+          alt={post.label}
+          fill
+          className="object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
+    </>
   );
 };
 

@@ -5,6 +5,10 @@ export const museums = [
     price: "€120",
     img: "/assets/66.jpg",
     extraImages: ["/assets/63.jpg", "/assets/63.jpg", "/assets/63.jpg"],
+     specialRoutes: [
+    "/museums/louvre/after-hours",
+    "/museums/louvre/masterpieces",
+  ],
     description:
       "Explore the world’s largest art museum, home to the Mona Lisa and countless masterpieces from antiquity to the Renaissance.",
   },
