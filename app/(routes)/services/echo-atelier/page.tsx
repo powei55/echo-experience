@@ -45,23 +45,17 @@ const EchoAtelierPage = () => {
       {/* Couture Services Section */}
       <section className="relative w-full bg-[#e6c8b8]/[0.17] text-[#1c3934] py-20 px-6 md:px-20 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <h2
             className="text-3xl md:text-4xl font-bold mb-12 tracking-wide text-center md:text-left"
           >
             The Echo Atelier ( For Brand Collaboration)
-          </motion.h2>
+          </h2>
 
           {/* Cards */}
           <div className="grid grid-cols-1 gap-4">
             {BrandServices.map((service) => (
-              <motion.div
+              <div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
                 className="bg-white/60 shadow-md rounded-xl overflow-hidden backdrop-blur-sm hover:shadow-xl transition-all duration-500 flex flex-col"
               >
                 <div className="relative w-full h-52">
@@ -89,11 +83,19 @@ const EchoAtelierPage = () => {
                     Request This Service
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
+        <div className="text-center pb-16">
+                    <Link
+                      href="/"
+                      className="text-[#1c3934] underline hover:text-[#294f49]"
+                    >
+                      ← Back to Home
+                    </Link>
+                  </div>
         {/* One single ReservationModal rendered globally */}
       <ReservationModal
         isOpen={!!selectedService}

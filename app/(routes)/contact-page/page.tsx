@@ -313,6 +313,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import SuccessModal from "@/app/components/SuccessModal";
+import Link from "next/link";
 
 
 const ContactPage = () => {
@@ -352,7 +353,7 @@ const ContactPage = () => {
   return (
     <main className="bg-[#f9f7f5] text-[#1c3934] min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/assets/7.jpg')] bg-cover bg-center">
+      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/assets/80.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-[#1c3934]/70"></div>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -366,51 +367,39 @@ const ContactPage = () => {
 
       {/* Contact Info */}
       <section className="py-20 px-6 md:px-12 lg:px-24 grid md:grid-cols-3 gap-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="bg-white rounded-2xl p-10 shadow-md hover:shadow-xl transition"
         >
           <FaPhoneAlt className="text-4xl mx-auto text-[#1c3934] mb-4" />
           <h3 className="text-lg font-semibold mb-2">Call Us</h3>
           <p className="text-gray-700">+33 1 23 45 67 89</p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="bg-white rounded-2xl p-10 shadow-md hover:shadow-xl transition"
         >
           <FaEnvelope className="text-4xl mx-auto text-[#1c3934] mb-4" />
           <h3 className="text-lg font-semibold mb-2">Email Us</h3>
           <p className="text-gray-700">info@echoexperience.com</p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+        <div
           className="bg-white rounded-2xl p-10 shadow-md hover:shadow-xl transition"
         >
           <FaMapMarkerAlt className="text-4xl mx-auto text-[#1c3934] mb-4" />
           <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
           <p className="text-gray-700">12 Rue de Rivoli, 75004 Paris, France</p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Contact Form */}
       <section className="bg-[#c6c8b7]/20 py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-3xl mx-auto bg-white p-10 rounded-2xl shadow-lg">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <h2
             className="text-3xl font-bold text-center mb-10"
           >
             Send Us a Message
-          </motion.h2>
+          </h2>
 
           <form
             onSubmit={handleSubmit}
@@ -479,14 +468,12 @@ const ContactPage = () => {
             </div>
 
             {/* Submit Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               type="submit"
               className="cursor-pointer md:col-span-1 mt-4 bg-[#1c3934] text-[#f9f7f5] py-3 font-semibold hover:bg-[#294f49] transition"
             >
               Send Message
-            </motion.button>
+            </button>
 
             {/* Status Message */}
             {status && (
@@ -497,6 +484,14 @@ const ContactPage = () => {
           </form>
         </div>
       </section>
+       <div className="text-center pb-16">
+              <Link
+                href="/"
+                className="text-[#1c3934] underline hover:text-[#294f49]"
+              >
+                ← Back to Home
+              </Link>
+            </div>
       <SuccessModal
         show={showModal}
         onClose={() => setShowModal(false)}

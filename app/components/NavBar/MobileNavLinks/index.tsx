@@ -99,14 +99,15 @@ const MobileNavLinks: React.FC<Props> = ({ isOpen, onClose }) => {
                   transition={{ duration: 0.3 }}
                   className="flex flex-col gap-2 text-[11px] text-gray-600"
                 >
-                  <Link href="services/lifestyle-concierge" onClick={onClose} className="hover:text-black">
-                    Lifestyle Concierge
+                  <Link href="/services/lifestyle-concierge" onClick={onClose} className="hover:text-black">
+                    Concierge Services
                   </Link>
-                   <Link href="services/event-consultation" onClick={onClose} className="hover:text-black">
+                   <Link href="/services/event-consultation" onClick={onClose} className="hover:text-black">
                     Event Consultation
                   </Link>
-                  <Link href="/private-shopping" onClick={onClose} className="hover:text-black">
-                   Private Shopping Couture Access
+                  <Link href="/services/shopping" onClick={onClose} className="hover:text-black">
+                   Private Shopping
+                   <br /> Couture Access
                   </Link>
                   {/* <Link href="services/wine-and-taste" onClick={onClose} className="hover:text-black">
                     Wine & Taste
@@ -114,7 +115,7 @@ const MobileNavLinks: React.FC<Props> = ({ isOpen, onClose }) => {
                   <Link href="services/arrival-departure" onClick={onClose} className="hover:text-black">
                     Arrival & Departure
                   </Link> */}
-                  <Link href="services/echo-atelier" onClick={onClose} className="hover:text-black">
+                  <Link href="/services/echo-atelier" onClick={onClose} className="hover:text-black">
                     Echo Atelier
                   </Link>
                 </motion.div>
